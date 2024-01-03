@@ -1,3 +1,9 @@
+import { Showcase } from "@/components/showcase/Showcase  ";
+
 export default function Home() {
-    return <main></main>;
+    return <section>
+        <Showcase />
+
+
+    </section>;
 }

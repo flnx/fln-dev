@@ -18,8 +18,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 <Providers>
                     {/* <div className="container mx-auto px-4">
                     </div> */}
-                        <Nav />
-                        <main>{children}</main>
+                    <Nav />
+                    <main>{children}</main>
                 </Providers>
             </body>
         </html>
