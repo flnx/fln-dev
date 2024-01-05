@@ -3,7 +3,8 @@ import { Project } from "./Project"
 export const Projects = () => {
   return (
     <section className="pt-5 pb-5">
-        <div className="grid gap-8 grid-cols-1 xs:grid-cols-2 md:grid-cols-3 xl:grid-cols-4">
+        <h2 className="text-3xl mb-5">Personal Projects</h2>
+        <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
             <Project />
             <Project />
             <Project />
