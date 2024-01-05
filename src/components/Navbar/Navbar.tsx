@@ -24,7 +24,7 @@ export const Nav = () => {
     ];
 
     return (
-        <Navbar isBordered shouldHideOnScroll maxWidth="xl">
+        <Navbar className="mb-10" isBordered shouldHideOnScroll maxWidth="2xl">
             <NavbarContent className="sm:hidden" justify="start">
                 <NavbarMenuToggle />
             </NavbarContent>
