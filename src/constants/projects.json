@@ -4,27 +4,31 @@
     "description": "Destinations & Adventure",
     "stack": ["React", "Express", "MongoDB", "Vitest"],
     "live": "https://wheredoigo.onrender.com/",
-    "sourceCode": "https://github.com/flnx/wheredoigo"
+    "sourceCode": "https://github.com/flnx/wheredoigo",
+    "imageUrls": "/images/wheredoigo.png"
   },
   {
     "name": "Billionaire Cash Splash",
     "description": "Turn spending into comedy",
     "stack": ["React", "SCSS", "Typescript"],
     "live": "https://billionaire-cash-splash.web.app/",
-    "sourceCode": "https://github.com/flnx/Billionaire-Cash-Splash/tree/main"
+    "sourceCode": "https://github.com/flnx/Billionaire-Cash-Splash/tree/main",
+    "imageUrls": "/images/billionaire.png"
   },
   {
     "name": "E-Bike World",
     "description": "E-Bike Shop & Blog",
     "stack": ["VanillaJS", "LitHTML", "BaaS", "PageJS"],
     "live": "https://ebike-world.web.app/",
-    "sourceCode": "https://github.com/flnx/ebike-world"
+    "sourceCode": "https://github.com/flnx/ebike-world",
+    "imageUrls": "/images/ebikeworld.png"
   },
   {
     "name": "Weather Forecast",
     "description": "Multi language weather app",
     "stack": ["VanillaJS", "LitHTML", "PageJS", "WeatherAPI"],
     "live": "https://minimalistic-weather-app.web.app/",
-    "sourceCode": "https://github.com/flnx/Weather-App"
+    "sourceCode": "https://github.com/flnx/Weather-App",
+    "imageUrls": "/images/weather.png"
   }
 ]
