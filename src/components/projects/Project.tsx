@@ -1,6 +1,6 @@
-import { Card, CardFooter, Image, Button, CardHeader, Chip } from '@nextui-org/react';
-
+import { Card, CardFooter, Image, CardHeader, Chip } from '@nextui-org/react';
 import { ProjectProps } from '@/types/projectType';
+import Link from 'next/link';
 
 export const Project = ({
   name,
@@ -26,36 +26,46 @@ export const Project = ({
         <div className="flex flex-grow gap-2 items-center">
           <div className="flex flex-col gap-1 self-start">
             {stack.slice(0, 2).map((name) => (
-              <Chip size="sm" variant="bordered" className="border-white text-white" key={name}>
+              <Chip
+                size="sm"
+                variant="bordered"
+                className="border-white text-white"
+                key={name}
+              >
                 {name}
               </Chip>
             ))}
           </div>
           <div className="flex flex-col gap-1 self-start">
-          {stack.slice(2).map((name) => (
-              <Chip size="sm" variant="bordered" className="border-white text-white" key={name}>
+            {stack.slice(2, Math.min(stack.length, 4)).map((name) => (
+              <Chip
+                size="sm"
+                variant="bordered"
+                className="border-white text-white"
+                key={name}
+              >
                 {name}
               </Chip>
             ))}
           </div>
         </div>
         <div className="flex flex-col gap-1 ml-auto">
-          <Button
-            className="text-tiny text-white bg-black/20"
-            variant="flat"
-            color="default"
-            size="sm"
+          <Link
+            href={live}
+            className="flex justify-center rounded-md p-2 lg:px-3.5 lg:py-2.5 text-tiny text-white bg-black/20"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             Live
-          </Button>
-          <Button
-            className="text-tiny text-white bg-black/20"
-            variant="flat"
-            color="default"
-            size="sm"
+          </Link>
+          <Link
+            href={sourceCode}
+            className="flex justify-center rounded-md p-2 lg:px-3.5 lg:py-2.5 text-tiny text-white bg-black/20"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             Source Code
-          </Button>
+          </Link>
         </div>
       </CardFooter>
     </Card>

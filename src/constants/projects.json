@@ -16,14 +16,14 @@
   {
     "name": "E-Bike World",
     "description": "E-Bike Shop & Blog",
-    "stack": ["VanillaJS", "LitHTML", "Serverless Backend", "PageJS"],
+    "stack": ["VanillaJS", "LitHTML", "BaaS", "PageJS"],
     "live": "https://ebike-world.web.app/",
     "sourceCode": "https://github.com/flnx/ebike-world"
   },
   {
     "name": "Weather Forecast",
     "description": "Multi language weather app",
-    "stack": ["VanillaJS", "LitHTML", "PageJS", "Weather API"],
+    "stack": ["VanillaJS", "LitHTML", "PageJS", "WeatherAPI"],
     "live": "https://minimalistic-weather-app.web.app/",
     "sourceCode": "https://github.com/flnx/Weather-App"
   }
