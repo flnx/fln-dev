@@ -1,0 +1,32 @@
+{
+  "projects": [
+    {
+      "name": "Where Do I Go",
+      "description": "Destinations & Adventure",
+      "stack": ["React", "Express", "MongoDB", "Vitest"],
+      "live": "https://wheredoigo.onrender.com/",
+      "sourceCode": "https://github.com/flnx/wheredoigo"
+    },
+    {
+      "name": "Billionaire Cash Splash",
+      "description": "Turn spending into comedy",
+      "stack": ["React", "Typescript", "SCSS"],
+      "live": "https://billionaire-cash-splash.web.app/",
+      "sourceCode": "https://github.com/flnx/Billionaire-Cash-Splash/tree/main"
+    },
+    {
+      "name": "E-Bike World",
+      "description": "E-Bike Shop & Blog",
+      "stack": ["VanillaJS", "LitHTML", "Serverless Backend", "PageJS"],
+      "live": "https://ebike-world.web.app/",
+      "sourceCode": "https://github.com/flnx/ebike-world"
+    },
+    {
+      "name": "Weather Forecast",
+      "description": "Multi language weather app",
+      "stack": ["VanillaJS", "LitHTML", "PageJS", "Weather API"],
+      "live": "https://minimalistic-weather-app.web.app/",
+      "sourceCode": "https://github.com/flnx/Weather-App"
+    }
+  ]
+}
