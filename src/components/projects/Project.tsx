@@ -11,19 +11,21 @@ export const Project = ({
   imageUrls,
 }: ProjectProps) => {
   return (
-    <div>
-      <p className="text-tiny text-center text-white/80 uppercase font-bold mb-2.5">
+    <div className="mb-5">
+      <p className="text-tiny text-center text-white/80 uppercase font-bold mb-3">
         {description}
       </p>
-      <Card isFooterBlurred className="border-none bg-content1" radius="lg">
+      <Card isFooterBlurred className="border-none bg-content1 h-full" radius="lg">
         <CardHeader className="absolute z-10 flex-col !items-start pointer-events-none hidden xl:flex bg-black/20">
           <p className="text-tiny text-white/80 uppercase font-bold">{name}</p>
         </CardHeader>
         <Image
           alt={name}
-          className="z-0 w-full min-h-60 object-cover !transition-all brightness-90 hover:brightness-100"
+          className="z-0 w-full min-h-72 object-cover !transition-all brightness-90 hover:brightness-100"
           src={imageUrls}
           isZoomed
+          width={1280}
+          height={1024}
         />
 
         <CardFooter className="absolute bg-black/40 bottom-0 z-10 border-t-1 border-default-600 dark:border-default-100 py-1.5">
