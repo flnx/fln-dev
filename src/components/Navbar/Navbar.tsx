@@ -11,16 +11,8 @@ import {
 
 export const Nav = () => {
     const menuItems = [
-        'Profile',
-        'Dashboard',
-        'Activity',
-        'Analytics',
-        'System',
-        'Deployments',
-        'My Settings',
-        'Team Settings',
-        'Help & Feedback',
-        'Log Out',
+        'Portfolio',
+        'About',
     ];
 
     return (
@@ -31,30 +23,25 @@ export const Nav = () => {
 
             <NavbarContent className="sm:hidden pr-3" justify="center">
                 <NavbarBrand>
-                    <p className="font-bold text-inherit">ACME</p>
+                    <p className="font-bold text-inherit">FLN-DEV</p>
                 </NavbarBrand>
             </NavbarContent>
 
             <NavbarContent className="hidden sm:flex gap-4" justify="center">
                 <NavbarBrand>
-                    <p className="font-bold text-inherit">ACME</p>
+                    <p className="font-bold text-inherit">FLN-DEV</p>
                 </NavbarBrand>
             </NavbarContent>
 
-            <NavbarContent className="hidden sm:flex gap-4" justify="end">
-                <NavbarItem>
-                    <Link color="foreground" href="#">
-                        Features
-                    </Link>
-                </NavbarItem>
+            <NavbarContent className="hidden sm:flex gap-6" justify="end">
                 <NavbarItem isActive>
-                    <Link href="#" aria-current="page" color="warning">
-                        Customers
+                    <Link href="#" aria-current="page" color="warning" className="text-xl">
+                        Portfolio
                     </Link>
                 </NavbarItem>
                 <NavbarItem>
-                    <Link color="foreground" href="#">
-                        Integrations
+                    <Link color="foreground" href="#" className="text-xl">
+                        About
                     </Link>
                 </NavbarItem>
             </NavbarContent>
@@ -64,13 +51,7 @@ export const Nav = () => {
                     <NavbarMenuItem key={`${item}-${index}`}>
                         <Link
                             className="w-full"
-                            color={
-                                index === 2
-                                    ? 'warning'
-                                    : index === menuItems.length - 1
-                                      ? 'danger'
-                                      : 'foreground'
-                            }
+                            color="foreground"
                             href="#"
                             size="lg"
                         >
