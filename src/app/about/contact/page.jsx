@@ -3,7 +3,7 @@ import { Form } from "./Form";
 const Contact = () => {
   return (
     <section>
-      <h1 className="text-2xl font-bold mb-6">Get in Touch</h1>
+      <h1 className="text-2xl font-bold mb-4">Get in Touch</h1>
 
       <div className="mb-4 font-semibold">
         <span className="font-semibold mr-3" aria-label="Email address">
@@ -19,7 +19,7 @@ const Contact = () => {
 
       <div className="my-10" />
 
-      <h1 className="text-2xl font-bold mb-6">Or leave a reply</h1>
+      <h2 className="text-2xl font-bold mb-4">Quick reply</h2>
 
       <Form />
     </section>

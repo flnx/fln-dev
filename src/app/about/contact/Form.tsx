@@ -7,7 +7,7 @@ export const Form = () => {
         isClearable
         type="name"
         label="Name"
-        placeholder="John Doe"
+        placeholder="Your name"
         className="max-w-xs"
       />
       <Input
