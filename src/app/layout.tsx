@@ -16,8 +16,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <html lang="en" className="dark">
             <body className={inter.className}>
                 <Providers>
-                    {/* <div className="container mx-auto px-4">
-                    </div> */}
                     <Nav />
                     <main>{children}</main>
                 </Providers>

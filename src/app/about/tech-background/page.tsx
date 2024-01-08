@@ -1,7 +1,9 @@
-const About = () => {
+import React from 'react';
+
+const WorkHistory = () => {
   return (
     <section>
-      <h1 className="text-2xl font-semibold mb-5">Bio</h1>
+      <h1 className="text-2xl font-semibold mb-5">Skills and Projects</h1>
 
       <article className="[&>p]:mb-5 text-large">
         <p>
@@ -27,4 +29,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default WorkHistory;

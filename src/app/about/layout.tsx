@@ -10,12 +10,10 @@ export const AboutLayout = ({ children }: { children: React.ReactNode }) => {
 
       <Container>
         <UserHeader />
-
-        <div className="w-96 flex flex-col mt-10">
+        <div className="max-w-screen-md flex flex-col gap-10 mt-10">
           <Tabs />
           {children}
         </div>
-        <Divider className="my-3" />
       </Container>
     </section>
   );
