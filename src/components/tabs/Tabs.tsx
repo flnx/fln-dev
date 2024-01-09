@@ -13,7 +13,7 @@ export const Tabs = () => {
       size="lg"
       radius="sm"
       fullWidth
-      className="[&>div]:bg-transparent"
+      className="[&>div]:bg-transparent max-w-screen-md"
     >
       <Tab key="/about" title="Profile" as={Link} href="/about" />
 

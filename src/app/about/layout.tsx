@@ -9,7 +9,7 @@ export const AboutLayout = ({ children }: { children: React.ReactNode }) => {
 
       <Container>
         <UserHeader />
-        <div className="max-w-screen-md m-auto xl:m-0 flex flex-col gap-10 mt-10">
+        <div className="max-w-screen-lg m-auto xl:m-0 flex flex-col gap-10 mt-10">
           <Tabs />
           {children}
         </div>

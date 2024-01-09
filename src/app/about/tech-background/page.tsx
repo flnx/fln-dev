@@ -4,24 +4,23 @@ import { Projects } from '@/components/projects/Projects';
 
 import projects from '@/constants/projects.json';
 
-const WorkHistory = () => {
+const TechBackground = () => {
   return (
     <section>
-      <h1 className="text-2xl font-semibold mb-5">
+      <h1 className="text-xl font-semibold mb-10">
         Creating and deploying interactive & mobile-friendly applications
       </h1>
 
-      <article className="[&>p]:mb-5 text-large">
-        <code className="text-medium inline-block mb-2">Skills</code>
+      <article>
+        <code className="text-medium inline-block mb-5">Skills</code>
         <Skills />
 
-        <Divider className="my-10" />
+        <Divider className="my-12 max-w-screen-md" />
 
-        <h1 className="text-2xl font-semibold mb-5">Personal projects</h1>
-
-        <Projects projects={projects}/>
+        <h1 className="text-2xl font-semibold mb-10">Personal projects</h1>
+        <Projects projects={projects} />
       </article>
     </section>
   );
 };
-export default WorkHistory;
+export default TechBackground;
