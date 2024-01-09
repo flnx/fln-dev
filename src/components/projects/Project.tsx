@@ -1,4 +1,4 @@
-import { Card, CardFooter, CardHeader, Chip, Image } from '@nextui-org/react';
+import { Card, CardFooter, Chip, Image } from '@nextui-org/react';
 import { ProjectProps } from '@/types/projectType';
 import Link from 'next/link';
 
@@ -16,9 +16,6 @@ export const Project = ({
         {description}
       </p>
       <Card isFooterBlurred className="border-none bg-content1 h-full" radius="lg">
-        <CardHeader className="absolute z-10 flex-col !items-start pointer-events-none hidden xl:flex bg-black/20">
-          <p className="text-tiny text-white/80 uppercase font-bold">{name}</p>
-        </CardHeader>
         <Image
           alt={name}
           className="z-0 w-full min-h-72 object-cover !transition-all brightness-90 hover:brightness-100"
