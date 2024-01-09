@@ -4,7 +4,7 @@ import { Github } from './components/Github';
 
 export const UserHeader = () => {
   return (
-    <header>
+    <header className="mb-10">
       <div className="md:flex">
         {/* Image Section*/}
         <section className="-mt-20">

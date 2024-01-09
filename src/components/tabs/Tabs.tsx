@@ -23,11 +23,7 @@ export const Tabs = () => {
         title="Tech Background"
         as={Link}
       />
-      <Tab 
-        key="/about/contact" 
-        href="/about/contact" 
-        title="Contact" as={Link} 
-      />
+      <Tab key="/about/contact" href="/about/contact" title="Contact" as={Link} />
     </TabsNext>
   );
 };

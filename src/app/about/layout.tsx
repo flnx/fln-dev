@@ -1,7 +1,6 @@
 import { Container } from '@/components/container/Container';
 import { UserHeader } from '@/components/user-header/UserHeader';
 import { Tabs } from '@/components/tabs/Tabs';
-import { Divider } from '@nextui-org/react';
 
 export const AboutLayout = ({ children }: { children: React.ReactNode }) => {
   return (
@@ -10,7 +9,7 @@ export const AboutLayout = ({ children }: { children: React.ReactNode }) => {
 
       <Container>
         <UserHeader />
-        <div className="max-w-screen-md flex flex-col gap-10 mt-10">
+        <div className="max-w-screen-md m-auto xl:m-0 flex flex-col gap-10 mt-10">
           <Tabs />
           {children}
         </div>

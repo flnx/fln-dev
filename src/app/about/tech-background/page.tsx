@@ -1,32 +1,27 @@
-import React from 'react';
+import { Divider } from '@nextui-org/react';
+import { Skills } from './Skills';
+import { Projects } from '@/components/projects/Projects';
+
+import projects from '@/constants/projects.json';
 
 const WorkHistory = () => {
   return (
     <section>
-      <h1 className="text-2xl font-semibold mb-5">Skills and Projects</h1>
+      <h1 className="text-2xl font-semibold mb-5">
+        Creating and deploying interactive & mobile-friendly applications
+      </h1>
 
       <article className="[&>p]:mb-5 text-large">
-        <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae
-          delectus commodi, suscipit minima quas maiores accusantium reiciendis
-          aspernatur quo ducimus omnis exercitationem nobis incidunt, ex ipsum
-          voluptas tempore eos dolores voluptatem. Dicta voluptas inventore est in,
-          obcaecati facilis laborum ipsum laboriosam sunt, dignissimos sequi enim
-          fugiat neque quam, labore quos.
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic omnis
-          temporibus numquam suscipit saepe similique totam exercitationem eligendi
-          ullam repudiandae.
-        </p>
-        <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla
-          repudiandae, cum exercitationem perspiciatis fugiat modi. Minima voluptates
-          qui aspernatur distinctio.
-        </p>
+        <code className="text-medium inline-block mb-2">Skills</code>
+        <Skills />
+
+        <Divider className="my-10" />
+
+        <h1 className="text-2xl font-semibold mb-5">Personal projects</h1>
+
+        <Projects projects={projects}/>
       </article>
     </section>
   );
 };
-
 export default WorkHistory;
