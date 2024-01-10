@@ -1,6 +1,7 @@
 import { Container } from '@/components/container/Container';
 import { UserHeader } from '@/components/user-header/UserHeader';
 import { Tabs } from '@/components/tabs/Tabs';
+import { Suspense } from 'react';
 
 export const AboutLayout = ({ children }: { children: React.ReactNode }) => {
   return (

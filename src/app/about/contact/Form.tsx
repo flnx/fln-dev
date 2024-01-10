@@ -1,77 +1,71 @@
 'use client';
+import { sendEmail } from '@/app/server-actions/sendEmail';
+import { useFormState, useFormStatus } from 'react-dom';
+import { useEffect, useRef } from 'react';
 import { Input, Textarea, Button } from '@nextui-org/react';
-import { useState } from 'react';
-import { useFormState } from 'react-dom';
-
-type FormData = {
-  name: string;
-  email: string;
-  message: string;
-};
 
 export const Form = () => {
-  const [formData, setFormData] = useState<FormData>({
-    name: '',
-    email: '',
-    message: '',
+  const [formState, formAction] = useFormState(sendEmail, {
+    success: false,
+    data: [],
   });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
-  };
+  const formRef = useRef<HTMLFormElement>(null);
 
-  const sendEmail = async () => {
-    if (!formData.name || !formData.email || !formData.message) {
+  useEffect(() => {
+    if (formState.success) {
+      formRef.current?.reset();
     }
+  }, [formState.success]); 
 
-    const res = await fetch('/api/send', {
-      method: 'POST',
-      body: JSON.stringify({ name: 'Hi', email: 'asd@abv.bg', message: 'yolooo' }),
-    });
-
-    const data = await res.json();
+  const errMsg = (path: string) => {
+    return formState.data.find((e) => e.path === path)?.message;
   };
 
   return (
-    <form className="max-w-lg flex flex-col gap-2">
+    <form className="max-w-lg flex flex-col gap-2" action={formAction} ref={formRef}>
       <Input
         isClearable
+        name="name"
         type="name"
         label="Name"
-        name="name"
         placeholder="Your name"
         className="max-w-xs"
-        value={formData.name}
-        onChange={handleChange}
+        errorMessage={errMsg('name')}
         required
       />
       <Input
         isClearable
+        name="email"
         type="email"
         label="Email"
-        name="email"
         placeholder="Enter your email"
         className="max-w-xs"
-        value={formData.email}
-        onChange={handleChange}
         required
+        errorMessage={errMsg('email')}
       />
       <Textarea
+        name="message"
         label="Description"
         placeholder="Your message"
-        name="message"
         classNames={{
           base: 'max-w-lg',
           input: 'resize-y min-h-[40px]',
         }}
-        value={formData.message}
-        onChange={handleChange}
         required
-        errorMessage={"message must be at least 5 chars long"}
+        errorMessage={errMsg('message')}
       />
-      <Button color="primary" onPress={sendEmail}>
-        Button
-      </Button>
+      <SubmitButtoon />
     </form>
+  );
+};
+
+const SubmitButtoon = () => {
+  const { pending } = useFormStatus();
+
+  return (
+    <Button color="primary" type="submit" isLoading={pending}>
+      Submit
+    </Button>
   );
 };
