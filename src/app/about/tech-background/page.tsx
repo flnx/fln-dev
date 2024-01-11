@@ -4,7 +4,7 @@ import { Projects } from '@/components/projects/Projects';
 
 import projects from '@/constants/projects.json';
 
-const TechBackground = () => {
+const TechBackground = async () => {
   return (
     <section>
       <h1 className="text-xl font-semibold mb-10">

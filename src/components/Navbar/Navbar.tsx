@@ -6,6 +6,7 @@ import { useState } from 'react';
 import { Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenu, NavbarMenuItem, NavbarMenuToggle, Link } from '@nextui-org/react';
 
 const paths = [
+  { name: 'Blog', href: '/blog' },
   { name: 'Portfolio', href: '/Portfolio' },
   { name: 'About', href: '/about' },
 ];
