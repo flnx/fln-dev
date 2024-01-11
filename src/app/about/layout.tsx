@@ -1,11 +1,10 @@
 import { Container } from '@/components/container/Container';
 import { UserHeader } from '@/components/user-header/UserHeader';
 import { Tabs } from '@/components/tabs/Tabs';
-import { Suspense } from 'react';
 
 export const AboutLayout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <section className="absolute inset-0">
+    <section className="relative -top-10">
       <div className="h-40 w-full md:h-72 bg-gradient-to-l from-pink-300 via-purple-300 to-indigo-400 z-0" />
 
       <Container>
