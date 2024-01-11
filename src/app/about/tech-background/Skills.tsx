@@ -10,8 +10,8 @@ export const Skills = () => {
   return (
     <div className="flex flex-wrap gap-3 max-w-md">
       {skills.map((s: Skill) => (
-        <Chip key={s.name}>
-          <code>{s.name}</code>
+        <Chip key={s.name} className="bg-slate-800 text-white">
+          <code className="font-semibold">{s.name}</code>
         </Chip>
       ))}
     </div>

@@ -23,18 +23,15 @@ export const Showcase = () => {
             </h1>
             <div className="flex flex-col gap-5">
               <Link
-                isBlock
                 href="/blog"
-                color="foreground"
-                className="rounded-3xl mr-auto bg-primary font-semibold w-52 flex flex-col py-5"
+                className="rounded-3xl border-1 border-foreground mr-auto bg-primary text-primary-foreground font-semibold w-52 flex flex-col py-5"
               >
                 Read the Blog
               </Link>
               <Link
-                isBlock
                 href="/blog"
                 color="foreground"
-                className="rounded-3xl border-2 border-foreground font-semibold w-52 flex flex-col py-5"
+                className="rounded-3xl border-1 border-foreground font-semibold w-52 flex flex-col py-5"
               >
                 Projects
               </Link>

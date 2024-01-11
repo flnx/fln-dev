@@ -85,7 +85,7 @@ export const Nav = () => {
               href={p.href}
               aria-current={isActive(p.href) ? 'page' : false}
               color={`${isActive(p.href) ? 'warning' : 'foreground'}`}
-              className="text-xl"
+              className="text-lg font-medium"
             >
               {p.name}
             </Link>

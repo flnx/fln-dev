@@ -44,10 +44,12 @@ const config: Config = {
           colors: {
             background: "#FFFFFF", // or DEFAULT
             foreground: "#11181C", // or 50 to 900 DEFAULT
+            warning: "#11181C", // or 50 to 900 DEFAULT
             primary: {
               //... 50 to 900
               foreground: "#FFFFFF",
-              DEFAULT: "#006FEE",
+              DEFAULT: "#000",
+              
             },
             // ... rest of the colors
           },
@@ -58,22 +60,11 @@ const config: Config = {
             foreground: "#ECEDEE", // or 50 to 900 DEFAULT
             primary: {
               //... 50 to 900
-              foreground: "#FFFFFF",
-              DEFAULT: "#006FEE",
+              foreground: "#000",
+              DEFAULT: "#fff",
             },
           },
           // ... rest of the colors
-        },
-        mytheme: {
-          // custom theme
-          extend: "dark",
-          colors: {
-            primary: {
-              DEFAULT: "#BEF264",
-              foreground: "#000000",
-            },
-            focus: "#BEF264",
-          },
         },
       },
     }),

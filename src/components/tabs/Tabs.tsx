@@ -13,9 +13,16 @@ export const Tabs = () => {
       size="lg"
       radius="sm"
       fullWidth
-      className="[&>div]:bg-transparent max-w-screen-md"
+      className="max-w-screen-md"
+      color="primary"
+      variant="light"
     >
-      <Tab key="/about" title="Profile" as={Link} href="/about" />
+      <Tab
+        key="/about"
+        title="Profile"
+        as={Link}
+        href="/about"
+      />
 
       <Tab
         key="/about/tech-background"
@@ -23,7 +30,12 @@ export const Tabs = () => {
         title="Tech Background"
         as={Link}
       />
-      <Tab key="/about/contact" href="/about/contact" title="Contact" as={Link} />
+      <Tab
+        key="/about/contact"
+        href="/about/contact"
+        title="Contact"
+        as={Link}
+      />
     </TabsNext>
   );
 };
