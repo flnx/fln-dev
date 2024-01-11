@@ -21,14 +21,22 @@ export const Showcase = () => {
               I'm Kaloyan, I like coding and sharing my experiences in the world of
               web development
             </h1>
-            <div className="flex flex-col gap-2">
+            <div className="flex flex-col gap-5">
               <Link
                 isBlock
                 href="/blog"
                 color="foreground"
-                className="py-5 px-10 rounded-lg mr-auto bg-primary ground font-semibold"
+                className="rounded-3xl mr-auto bg-primary font-semibold w-52 flex flex-col py-5"
               >
                 Read the Blog
+              </Link>
+              <Link
+                isBlock
+                href="/blog"
+                color="foreground"
+                className="rounded-3xl border-2 border-foreground font-semibold w-52 flex flex-col py-5"
+              >
+                Projects
               </Link>
             </div>
           </div>
