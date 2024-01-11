@@ -3,7 +3,17 @@
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
 
-import { Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenu, NavbarMenuItem, NavbarMenuToggle, Link } from '@nextui-org/react';
+import {
+  Navbar,
+  NavbarBrand,
+  NavbarContent,
+  NavbarItem,
+  NavbarMenu,
+  NavbarMenuItem,
+  NavbarMenuToggle,
+  Link,
+} from '@nextui-org/react';
+import { ThemeSwitcher } from '../theme-switcher/ThemeSwitcher';
 
 const paths = [
   { name: 'Blog', href: '/blog' },
@@ -33,7 +43,7 @@ export const Nav = () => {
       </NavbarContent>
 
       {/* Mobile Logo*/}
-      <NavbarContent className="sm:hidden pr-3" justify="center">
+      <NavbarContent className="sm:hidden" justify="center">
         <NavbarBrand>
           <Link
             href="/"
@@ -45,6 +55,9 @@ export const Nav = () => {
             FLN-DEV
           </Link>
         </NavbarBrand>
+        <NavbarItem className="ml-2">
+          <ThemeSwitcher />
+        </NavbarItem>
       </NavbarContent>
 
       {/* Desktop Logo*/}
@@ -63,6 +76,9 @@ export const Nav = () => {
 
       {/* Desktop */}
       <NavbarContent className="hidden sm:flex gap-6" justify="end">
+        <NavbarItem>
+          <ThemeSwitcher />
+        </NavbarItem>
         {paths.map((p) => (
           <NavbarItem isActive={isActive(p.href)} key={p.name}>
             <Link
