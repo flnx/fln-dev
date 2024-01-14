@@ -6,14 +6,21 @@ const Page = () => {
     <Container>
       {/* Featured */}
       <h1 className="text-4xl text-center mb-2 font-bold">IT Blog Page</h1>
-      <p className="text-large text-center mb-20">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde, perspiciatis.</p>
-      <article>
-        <Blog />
-
+      <p className="text-large text-center mb-20">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde, perspiciatis.
+      </p>
+      <article className="mb-28">
+        <Blog featured={true} />
       </article>
-
       {/* Blogs */}
-      <section></section>
+      <section>
+        <div className="flex gap-10">
+          <Blog />
+          <Blog />
+          <Blog />
+          <Blog />
+        </div>
+      </section>
     </Container>
   );
 };
