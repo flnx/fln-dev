@@ -9,7 +9,7 @@ export default function Home() {
     <section>
       <Container>
         <Showcase />
-        <h2 className="text-2xl mb-8">Personal Projects</h2>
+        <h2 className="text-3xl mb-12 font-mono tracking-wide">Personal Projects</h2>
         <Projects projects={projects} />
       </Container>
     </section>

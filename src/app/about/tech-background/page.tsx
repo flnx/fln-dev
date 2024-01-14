@@ -17,7 +17,8 @@ const TechBackground = async () => {
 
         <Divider className="my-12 max-w-screen-md" />
 
-        <h1 className="text-2xl font-semibold mb-10">Personal projects</h1>
+        <h2 className="text-xl font-semibold mb-10">Personal projects</h2>
+        {/* <h2 className="text-2xl mb-12 font-mono tracking-wide">Personal Projects</h2> */}
         <Projects projects={projects} />
       </article>
     </section>

@@ -11,8 +11,8 @@ export const Project = ({
   imageUrls,
 }: ProjectProps) => {
   return (
-    <div className="mb-5">
-      <p className="text-tiny text-center text-white/80 uppercase font-bold mb-3">
+    <div className="mb-6">
+      <p className="text-medium font-mono text-center uppercase font-bold mb-4">
         {description}
       </p>
       <Card isFooterBlurred className="border-none bg-content1 h-full" radius="lg">

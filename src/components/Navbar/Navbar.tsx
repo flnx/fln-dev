@@ -28,11 +28,11 @@ export const Nav = () => {
   const handleMenu = (bool: boolean) => setIsOpen(bool);
 
   const isActive = (path: string) => path === pathname;
+  const activeClass = (path: string) => path === pathname ? 'text-pink-600' : 'foreground';
 
   return (
     <Navbar
-      className="mb-10"
-      isBordered
+      className="py-5 mb-10"
       shouldHideOnScroll
       maxWidth="2xl"
       onMenuOpenChange={handleMenu}
@@ -47,9 +47,8 @@ export const Nav = () => {
         <NavbarBrand>
           <Link
             href="/"
-            className="font-bold text-2xl"
+            className={`font-bold text-2xl ${activeClass('/')}`}
             aria-current={isActive('/') ? 'page' : false}
-            color={`${isActive('/') ? 'warning' : 'foreground'}`}
             onClick={() => handleMenu(false)}
           >
             FLN-DEV
@@ -65,9 +64,8 @@ export const Nav = () => {
         <NavbarBrand>
           <Link
             href="/"
-            className="font-bold text-2xl"
+            className={`font-bold text-2xl ${activeClass('/')}`}
             aria-current={isActive('/') ? 'page' : false}
-            color={`${isActive('/') ? 'warning' : 'foreground'}`}
           >
             FLN-DEV
           </Link>
@@ -84,8 +82,7 @@ export const Nav = () => {
             <Link
               href={p.href}
               aria-current={isActive(p.href) ? 'page' : false}
-              color={`${isActive(p.href) ? 'warning' : 'foreground'}`}
-              className="text-lg font-medium"
+              className={`text-lg font-medium ${activeClass(p.href)}`}
             >
               {p.name}
             </Link>
@@ -100,8 +97,7 @@ export const Nav = () => {
             <Link
               href={p.href}
               aria-current={isActive(p.href) ? 'page' : false}
-              color={`${isActive(p.href) ? 'warning' : 'foreground'}`}
-              className="text-xl"
+              className={`text-2xl mb-1 ${activeClass(p.href)}`}
               onClick={() => handleMenu(false)}
             >
               {p.name}

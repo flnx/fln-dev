@@ -16,11 +16,16 @@ export const Showcase = () => {
           />
         </div>
         <div className="flex-1 pt-5 md:pt-32">
-          <div className="flex flex-col gap-20 lg:pr-28">
-            <h1 className="text-3xl md:text-4xl !leading-relaxed">
-              I'm Kaloyan, I like <span className="font-bold text-secondary">coding</span> and sharing my experiences in the world of
-              web development
+          <div className="flex flex-col lg:pr-28">
+            <h1 className="text-3xl md:text-4xl !leading-relaxed mb-5">
+              I'm Kaloyan, I like{' '}
+              <span className="font-bold text-pink-700">coding</span> and sharing my
+              experiences in the world of web development
             </h1>
+            <p className="mb-20 font-mono text-large">
+              Explore the world of coding and don't miss single Project. Are you ready to dive and become a hacker?
+            </p>
+
             <div className="flex flex-col gap-5">
               <Link
                 href="/blog"
