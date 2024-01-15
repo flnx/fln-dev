@@ -17,7 +17,7 @@ import { ThemeSwitcher } from '../theme-switcher/ThemeSwitcher';
 
 const paths = [
   { name: 'Blog', href: '/blog' },
-  { name: 'Portfolio', href: '/Portfolio' },
+  { name: 'Projects', href: '/projects' },
   { name: 'About', href: '/about' },
 ];
 
