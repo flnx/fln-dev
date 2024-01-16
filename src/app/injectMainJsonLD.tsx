@@ -1,0 +1,108 @@
+export const mainJsonLD = () => {
+  return {
+    __html: JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'Person',
+      name: 'Kaloyan Georgiev (Fln Dev)',
+      jobTitle: 'Web Developer',
+      description:
+        'Web developer with a passion for building engaging interactive web applications and interactive experiences. Explore my portfolio and blog posts to learn more',
+      skills: [
+        'Frontend & Backend Development',
+        'Responsive Design',
+        'React',
+        'NextJS',
+        'HTML',
+        'CSS',
+        'SCSS',
+        'Tailwind',
+        'JavaScript',
+        'MongoDB',
+        'Express',
+        'SQL',
+        'PostgresQL',
+        'Unit Testing',
+        'Mongoose',
+        'Git',
+      ],
+      knowsAbout: [
+        'Web Development',
+        'React',
+        'NextJS',
+        'HTML',
+        'CSS',
+        'JavaScript',
+      ],
+      education: [
+        {
+          '@type': 'EducationalOrganization',
+          name: 'SoftUni',
+          url: 'https://softuni.bg/',
+        },
+      ],
+      url: 'https://www.fln-dev.vercel.com/',
+      image: ['/images/me.jpg'],
+      logo: ['FLN DEV'],
+      sameAs: ['https://github.com/flnx'],
+      projects: [
+        {
+          '@type': 'Project',
+          name: 'Where Do I Go',
+          description:
+            'A platform for sharing and exploring adventurous destinations around the globe and more',
+          technologies: [
+            'React',
+            'CSS Modules',
+            'Express',
+            'MongoDB',
+            'Mongoose',
+            'Cloudinary',
+            'Vitest',
+          ],
+          url: 'https://wheredoigo.onrender.com/',
+          githubRepo: 'https://github.com/flnx/wheredoigo',
+        },
+        {
+          '@type': 'Project',
+          name: 'Billionaire Cash Splash',
+          description: 'Pick a billionaire and turn spending into comedy',
+          technologies: ['React', 'SCSS', 'Typescript'],
+          url: 'https://billionaire-cash-splash.web.app/',
+          githubRepo: 'https://github.com/flnx/Billionaire-Cash-Splash/tree/main',
+        },
+        {
+          '@type': 'Project',
+          name: 'E-Bike World',
+          description: 'E-Bike Shop & Blog',
+          technologies: ['VanillaJS', 'LitHTML', 'BaaS (back4app)', 'PageJS'],
+          url: 'https://ebike-world.web.app/',
+          githubRepo: 'https://github.com/flnx/ebike-world',
+        },
+        {
+          '@type': 'Project',
+          name: 'Multi language weather app',
+          description: 'E-Bike Shop & Blog',
+          technologies: ['VanillaJS', 'LitHTML', 'WeatherAPI', 'PageJS'],
+          url: 'https://weather-forecast-b59e4.web.app/',
+          githubRepo: 'https://github.com/flnx/Weather-App',
+        },
+      ],
+      blogTopics: [
+        'Frontend Development',
+        'Web Development',
+        'NextJS',
+        'React',
+        'JavaScript',
+        'HTML',
+        'CSS',
+      ],
+      publications: [
+        {
+          '@type': 'BlogPost',
+          name: 'Building a Social Media Landing Page with React',
+          url: 'https://www.example.com/blog-post-1',
+        },
+      ],
+    }),
+  };
+};

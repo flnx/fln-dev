@@ -1,15 +1,21 @@
 [
   {
     "name": "Where Do I Go",
-    "description": "Destinations & Adventure",
-    "stack": ["React", "Express", "MongoDB", "Vitest"],
+    "description": "A platform for sharing and exploring adventurous destinations around the globe and more",
+    "stack": [
+      "React",
+      "Express",
+      "MongoDB",
+      "Vitest",
+      "Cloudinary"
+    ],
     "live": "https://wheredoigo.onrender.com/",
     "sourceCode": "https://github.com/flnx/wheredoigo",
     "imageUrls": "/images/wheredoigo.png"
   },
   {
     "name": "Billionaire Cash Splash",
-    "description": "Turn spending into comedy",
+    "description": "Pick a billionaire and turn spending into comedy",
     "stack": ["React", "SCSS", "Typescript"],
     "live": "https://billionaire-cash-splash.web.app/",
     "sourceCode": "https://github.com/flnx/Billionaire-Cash-Splash/tree/main",
@@ -27,7 +33,7 @@
     "name": "Weather Forecast",
     "description": "Multi language weather app",
     "stack": ["VanillaJS", "LitHTML", "PageJS", "WeatherAPI"],
-    "live": "https://minimalistic-weather-app.web.app/",
+    "live": "https://weather-forecast-b59e4.web.app/",
     "sourceCode": "https://github.com/flnx/Weather-App",
     "imageUrls": "/images/weather.png"
   }

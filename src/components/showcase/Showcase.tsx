@@ -23,7 +23,7 @@ export const Showcase = () => {
               experiences in the world of web development
             </h1>
             <p className="mb-20 font-mono text-large">
-              Explore the world of coding and don't miss single Project. Are you ready to dive and become a hacker?
+              Creating and deploying interactive, mobile-friendly and accessible web applications.
             </p>
 
             <div className="flex flex-col gap-5">

@@ -1,6 +1,8 @@
-import { Card, CardFooter, Chip, Image } from '@nextui-org/react';
+import { Card, CardBody, Divider, CardHeader, Chip, Image } from '@nextui-org/react';
 import { ProjectProps } from '@/types/projectType';
 import Link from 'next/link';
+
+type ExtendedProjectProps = ProjectProps & { col?: boolean };
 
 export const Project = ({
   name,
@@ -9,53 +11,41 @@ export const Project = ({
   live,
   sourceCode,
   imageUrls,
-}: ProjectProps) => {
+  divider,
+  col,
+}: ExtendedProjectProps) => {
   return (
-    <div className="mb-6">
-      <p className="text-medium font-mono text-center uppercase font-bold mb-4">
-        {description}
-      </p>
-      <Card isFooterBlurred className="border-none bg-content1 h-full" radius="lg">
-        <Image
-          alt={name}
-          className="z-0 w-full min-h-72 object-cover !transition-all brightness-90 hover:brightness-100"
-          src={imageUrls}
-          isZoomed
-          width={1280}
-          height={1024}
-        />
-
-        <CardFooter className="absolute bg-black/40 bottom-0 z-10 border-t-1 border-default-600 dark:border-default-100 py-1.5">
-          <div className="flex flex-grow gap-2 items-center">
-            <div className="flex flex-col gap-1 self-start">
-              {stack.slice(0, 2).map((name) => (
-                <Chip
-                  size="sm"
-                  variant="bordered"
-                  className="border-white text-white"
-                  key={name}
-                >
-                  {name}
-                </Chip>
-              ))}
-            </div>
-            <div className="flex flex-col gap-1 self-start">
-              {stack.slice(2, Math.min(stack.length, 4)).map((name) => (
-                <Chip
-                  size="sm"
-                  variant="bordered"
-                  className="border-white text-white"
-                  key={name}
-                >
-                  {name}
-                </Chip>
-              ))}
-            </div>
+    <>
+      <Card
+        isBlurred
+        className={`bg-background/60  dark:bg-default-100/50 shadow-md ${
+          col ? '' : 'sm:flex-row'
+        } relative`}
+        shadow="none"
+      >
+        <CardHeader className={col ? 'flex-2' : 'flex-1'}>
+          <Image
+            alt="Album cover"
+            className="object-cover"
+            src={imageUrls}
+            width="100%"
+          />
+        </CardHeader>
+        <CardBody className="flex-1 overflow-visible">
+          <h1 className="text-2xl font-bold mb-4">{name}</h1>
+          <p className="mb-8">{description}</p>
+          <div className="flex mt-auto flex-wrap gap-2 mb-6">
+            {stack.map((s) => (
+              <Chip className="bg-pink-800 text-white dark:bg-teal-400/10 dark:text-teal-300" key={s}>
+                {s}
+              </Chip>
+            ))}
           </div>
-          <div className="flex flex-col gap-1 ml-auto">
+
+          <div className="flex gap-1">
             <Link
               href={live}
-              className="flex justify-center rounded-md p-2 lg:px-3.5 lg:py-2.5 text-tiny text-white bg-black/20"
+              className="w-28 py-3 rounded-md text-tiny text-white bg-zinc-900 dark:bg-black/10 border border-transparent dark:border-teal-400/5 flex items-center justify-center"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -63,15 +53,18 @@ export const Project = ({
             </Link>
             <Link
               href={sourceCode}
-              className="flex justify-center rounded-md p-2 lg:px-3.5 lg:py-2.5 text-tiny text-white bg-black/20"
+              className="w-28 py-3 rounded-md text-tiny text-white bg-zinc-900 dark:bg-black/10 border border-transparent dark:border-teal-400/5 flex items-center justify-center"
               target="_blank"
               rel="noopener noreferrer"
             >
               Source Code
             </Link>
           </div>
-        </CardFooter>
+        </CardBody>
       </Card>
-    </div>
+      {divider && (
+        <Divider className="my-20 bg-gradient-to-l from-pink-300 via-purple-300 to-indigo-400" />
+      )}
+    </>
   );
 };

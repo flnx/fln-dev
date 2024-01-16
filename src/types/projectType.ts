@@ -5,4 +5,5 @@ export type ProjectProps = {
     live: string; // URL of the project
     sourceCode: string; // URL of the project's source code
     imageUrls: string;
+    divider?: boolean
 };
