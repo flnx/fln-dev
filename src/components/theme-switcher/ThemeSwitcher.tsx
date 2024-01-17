@@ -32,9 +32,7 @@ export const ThemeSwitcher = () => {
           className={slots.wrapper({
             class: [
               'w-11 h-9',
-              `flex items-center justify-center ${
-                theme === 'dark' ? '!bg-pink-700' : '!bg-transparent'
-              } !text-foreground`,
+              `flex items-center justify-center ${theme === 'dark' ? '!bg-pink-700' : '!bg-transparent'} !text-foreground`,
               'rounded-lg bg-default-00 hover:bg-default-200',
             ],
           })}
