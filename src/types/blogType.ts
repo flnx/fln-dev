@@ -42,7 +42,8 @@ type BlogAttributes = {
   imgUrl: BlogImage;
 };
 
-export type BlogData = {
+export type BlogDataProps = {
   id: number;
   attributes: BlogAttributes;
+  featured?: boolean | null;
 };
