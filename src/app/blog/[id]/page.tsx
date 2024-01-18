@@ -1,7 +1,23 @@
+import { getBlogArticle } from '@/app/api/strapi/blogs';
 import { Container } from '@/components/container/Container';
 import { Chip, Image } from '@nextui-org/react';
+import { notFound } from 'next/navigation';
 
-const BlogArticle = () => {
+type BlogArticleProps = {
+  params: {
+    id: string;
+  };
+};
+
+const BlogArticle = async ({ params }: BlogArticleProps) => {
+  const article = await getBlogArticle(params.id);
+
+  console.log(article);
+
+  if (article.data.length === 0) {
+    notFound();
+  }
+
   return (
     <Container>
       <header className="max-w-screen-md m-auto mb-16">

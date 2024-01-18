@@ -9,7 +9,7 @@ export const Blog = (blogData: BlogDataProps) => {
   const { width, height } = formats?.medium ?? {};
 
   return (
-    <Link href="/blog/1">
+    <Link href={`/blog/${blog?.slug || ''}`}>
       <Card
         className={`${featured ? 'lg:flex-row' : ''} gap-5 bg-transparent shadow-none`}
       >

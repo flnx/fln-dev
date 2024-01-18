@@ -23,3 +23,20 @@ export const getBlogs = async () => {
     throw err;
   }
 };
+
+export const getBlogArticle = async (slug: string) => {
+  try {
+    const res = await fetch(
+      `${process.env.STRAPI_HOST}/api/blogs?filters[slug][$eq]=${slug}&populate=imgUrl&thumbnail`,
+      authHeaders(),
+    );
+
+    if (!res.ok) {
+      throw new Error("Failed to fetch data");
+    }
+
+    return res.json();
+  } catch (err) {
+    throw err;
+  }
+};
