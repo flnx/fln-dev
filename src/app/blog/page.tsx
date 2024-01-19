@@ -3,6 +3,13 @@ import { Container } from '@/components/container/Container';
 import { getBlogs } from '../api/strapi/blogs';
 import { BlogDataProps } from '@/types/blogType';
 import { FeaturedBlog } from '@/components/blog/Featured';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Blog',
+  description: 'A technical blog about web development and articles on NextJS, React, HTML, CSS, Front-end development and more.',
+  keywords: 'React, NextJS, JavaScript, HTML, CSS, Web Development, Front-end, SSR, Server Side Components'
+};
 
 type BlogsProp = {
   data: BlogDataProps[];
@@ -18,6 +25,7 @@ type BlogsProp = {
 
 const Page = async () => {
   const blogs: BlogsProp = await getBlogs();
+  const featured: BlogDataProps = blogs.data.find(b => b.attributes.featured)!;
 
   return (
     <Container>
@@ -27,7 +35,7 @@ const Page = async () => {
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde, perspiciatis.
       </p>
       <article className="mb-28">
-        <FeaturedBlog {...blogs.data[0]} />
+        <FeaturedBlog {...featured} />
       </article>
       {/* Blogs */}
       <section>

@@ -25,6 +25,13 @@ type BlogImage = {
   };
 };
 
+type BlogSEO = {
+  id: number | null;
+  metaTitle: string | null;
+  metaDescription: string | null;
+  structuredData: JSON | null;
+}
+
 type BlogAttributes = {
   title: string;
   slug: string;
@@ -40,10 +47,11 @@ type BlogAttributes = {
   publishedAt: string;
   content: string;
   imgUrl: BlogImage;
+  Seo?: BlogSEO;
+  RelatedBlogs?: BlogDataProps;
 };
 
 export type BlogDataProps = {
   id: number;
   attributes: BlogAttributes;
-  featured?: boolean | null;
 };

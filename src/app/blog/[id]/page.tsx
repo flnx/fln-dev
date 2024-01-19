@@ -3,14 +3,27 @@ import { Container } from '@/components/container/Container';
 import { BlogDataProps } from '@/types/blogType';
 import { Chip, Image } from '@nextui-org/react';
 import { notFound } from 'next/navigation';
+import { Metadata } from 'next';
 
-type BlogArticlePageProps = {
-  params: {
-    id: string;
+type Props = {
+  params: { id: string };
+};
+
+export const generateMetadata = async ({ params }: Props): Promise<Metadata> => {
+  const article: { data: BlogDataProps[] } = await getBlogArticle(params.id);
+
+  if (article.data.length === 0) return {};
+
+  const { title, description, Seo, keywords } = article.data[0].attributes;
+
+  return {
+    title: Seo?.metaTitle ?? title,
+    description: Seo?.metaDescription ?? description,
+    keywords: keywords ?? '',
   };
 };
 
-const BlogArticle = async ({ params }: BlogArticlePageProps) => {
+const BlogArticle = async ({ params }: Props) => {
   const article: { data: BlogDataProps[] } = await getBlogArticle(params.id);
 
   if (article.data.length === 0) {
@@ -18,6 +31,7 @@ const BlogArticle = async ({ params }: BlogArticlePageProps) => {
   }
 
   const { attributes } = article.data[0];
+  const { url, alternativeText, width, height } = attributes.imgUrl.data.attributes;
 
   return (
     <Container>
@@ -33,10 +47,10 @@ const BlogArticle = async ({ params }: BlogArticlePageProps) => {
           <Chip color="secondary">{attributes.categories}</Chip>
         </div>
         <Image
-          src={attributes.imgUrl.data.attributes.url}
-          alt={attributes.imgUrl.data.attributes.alternativeText || 'blog image'}
-          width={attributes.imgUrl.data.attributes.width}
-          height={attributes.imgUrl.data.attributes.height}
+          src={url}
+          alt={alternativeText || 'blog image'}
+          width={width}
+          height={height}
           className="object-cover"
           style={{ maxHeight: '34rem' }}
         />
@@ -44,7 +58,7 @@ const BlogArticle = async ({ params }: BlogArticlePageProps) => {
       <article className="max-w-screen-md m-auto text-lg dark:text-slate-300 break-words">
         <div
           dangerouslySetInnerHTML={{ __html: attributes.content }}
-          className="prose prose-lg text-primary prose-headings:text-secondary"
+          className="prose prose-lg text-primary prose-headings:text-secondary prose-strong:text-primary"
         />
       </article>
     </Container>
