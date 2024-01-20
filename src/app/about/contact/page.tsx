@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { Form } from './Form';
 import { Metadata } from 'next';
 
@@ -27,12 +28,12 @@ const Contact = () => {
         <span className="font-bold mr-2" aria-label="Email address">
           Email:
         </span>
-        <a
+        <Link
           href="mailto:definitelywebdev@yahoo.com"
           className="text-pink-700 hover:text-primary-300 transition-all"
         >
           definitelywebdev@yahoo.com
-        </a>
+        </Link>
       </div>
 
       <div className="my-10" />
