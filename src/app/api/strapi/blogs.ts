@@ -44,7 +44,7 @@ export const getBlogArticle = async (slug: string) => {
 export const getLatestArticles = async () => {
   try {
     const res = await fetch(
-      `${process.env.STRAPI_HOST}/api/blogs?sort=createdAt:desc&pagination[page]=1&pagination[pageSize]=3`,
+      `${process.env.STRAPI_HOST}/api/blogs?sort=createdAt:desc&pagination[page]=1&pagination[pageSize]=3&fields[0]=title&fields[1]=description&fields[2]=date&fields[3]=categories&fields[4]=readTime&fields[5]&populate[0]=imgUrl`,
       authHeaders(),
     );
 
