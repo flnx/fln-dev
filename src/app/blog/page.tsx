@@ -1,9 +1,11 @@
+import type { Metadata } from 'next';
+
 import { Blog } from '@/components/blog/Blog';
 import { Container } from '@/components/container/Container';
-import { getBlogs } from '../api/strapi/blogs';
-import { BlogDataProps } from '@/types/blogType';
 import { FeaturedBlog } from '@/components/blog/Featured';
-import type { Metadata } from 'next';
+
+import { BlogDataProps } from '@/types/blogType';
+import { getBlogs } from '../api/strapi/blogs';
 
 export const metadata: Metadata = {
   title: 'Blog',

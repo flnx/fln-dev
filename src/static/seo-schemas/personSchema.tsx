@@ -99,5 +99,18 @@ export const personSchema: WithContext<Person> = {
         discussionUrl: 'https://github.com/flnx/Weather-App',
       },
     },
+    {
+      '@type': 'Project',
+      name: 'FLN Dev',
+      description: 'Personal Portfolio & Blog',
+      url: 'https://weather-forecast-b59e4.web.app/',
+      subjectOf: {
+        '@type': 'CreativeWork',
+        name: 'Technologies used',
+        description: 'A list of technologies used in the project',
+        keywords: ['NextJS', 'Typescript', 'Strapi', 'NextUI', 'Tailwind', 'Resend'],
+        discussionUrl: 'https://github.com/flnx/fln-dev',
+      },
+    },
   ],
 };

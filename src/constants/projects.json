@@ -36,5 +36,13 @@
     "live": "https://weather-forecast-b59e4.web.app/",
     "sourceCode": "https://github.com/flnx/Weather-App",
     "imageUrls": "/images/weather.png"
+  },
+  {
+    "name": "FLN Dev",
+    "description": "Personal Portfolio & Blog",
+    "stack": ["NextJS", "Typescript", "Strapi", "Resend", "NextUI", "Tailwind"],
+    "live": "https://nonexistingurldootdoot.com",
+    "sourceCode": "https://github.com/flnx/fln-dev",
+    "imageUrls": "/images/flndev.jpg"
   }
 ]

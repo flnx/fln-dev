@@ -26,7 +26,7 @@ export const Project = ({
         <CardHeader className={col ? 'flex-2' : 'flex-1'}>
           <Image
             alt="Album cover"
-            className="object-cover"
+            className="object-cover lg:min-h-60"
             src={imageUrls}
             width="100%"
           />
