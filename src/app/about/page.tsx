@@ -2,15 +2,16 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'About',
+  description:
+    'Frontend web developer with a passion for React, Next.js, and cool projects. Constantly learning and having fun. Explore my coding journey, along with my interests in running, fitness, and blogging about web development stuff and more!',
 };
 
 const About = () => {
   return (
     <section>
-      <h1 className="text-2xl font-semibold mb-5">Hi there👋</h1>
-
+      <h1 className="text-2xl font-semibold mb-7">Hi there👋</h1>
       <article
-        className="max-w-screen-xs [&>p]:mb-5 text-medium leading-7"
+        className="max-w-screen-xs prose prose-p:text-primary"
         aria-label="about me"
       >
         <p>

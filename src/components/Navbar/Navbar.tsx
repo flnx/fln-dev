@@ -2,6 +2,7 @@
 
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
+import { ThemeSwitcher } from '../theme-switcher/ThemeSwitcher';
 
 import {
   Navbar,
@@ -13,7 +14,6 @@ import {
   NavbarMenuToggle,
   Link,
 } from '@nextui-org/react';
-import { ThemeSwitcher } from '../theme-switcher/ThemeSwitcher';
 
 const paths = [
   { name: 'Blog', href: '/blog' },
@@ -32,7 +32,7 @@ export const Nav = () => {
 
   return (
     <Navbar
-      className="py-5 mb-10"
+      className="py-5"
       shouldHideOnScroll
       maxWidth="2xl"
       onMenuOpenChange={handleMenu}
@@ -91,13 +91,13 @@ export const Nav = () => {
       </NavbarContent>
 
       {/* Mobile */}
-      <NavbarMenu>
+      <NavbarMenu className="pt-14">
         {paths.map((p) => (
           <NavbarMenuItem isActive={isActive(p.href)} key={p.name}>
             <Link
               href={p.href}
               aria-current={isActive(p.href) ? 'page' : false}
-              className={`text-2xl mb-1 ${activeClass(p.href)}`}
+              className={`text-2xl mb-3 ${activeClass(p.href)}`}
               onClick={() => handleMenu(false)}
             >
               {p.name}

@@ -14,15 +14,15 @@ export const metadata: Metadata = {
 const Projects = () => {
   return (
     <Container>
-      <section className="max-w-screen-lg m-auto">
+      <section className="max-w-screen-lg m-auto mt-9">
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
         />
-        <h1 className="text-4xl font-bold tracking-tight mb-12">All Projects</h1>
+        <h1 className="text-4xl font-bold tracking-tight mb-12">Personal Projects</h1>
 
-        {projects.map((p) => (
-          <Project {...p} divider={true} key={p.name} />
+        {projects.map((p, i, arr) => (
+          <Project {...p} divider={!!arr[i + 1]} key={p.name} />
         ))}
       </section>
     </Container>

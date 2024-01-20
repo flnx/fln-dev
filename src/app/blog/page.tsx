@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-
 import { Blog } from '@/components/blog/Blog';
 import { Container } from '@/components/container/Container';
 import { FeaturedBlog } from '@/components/blog/Featured';
@@ -32,7 +31,7 @@ const Page = async () => {
   return (
     <Container>
       {/* Featured */}
-      <h1 className="text-4xl text-center mb-2 font-bold">IT Blog Page</h1>
+      <h1 className="text-4xl text-center mb-2 font-bold mt-8">IT Blog Page</h1>
       <p className="text-large text-center mb-20">
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde, perspiciatis.
       </p>

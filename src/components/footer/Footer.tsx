@@ -4,6 +4,12 @@ import { GithubIcon } from '../github-icon/GithubIcon';
 
 import Link from 'next/link';
 
+const paths = [
+  { name: 'Terms of Service (in Progress)', href: '#' },
+  { name: 'Privacy (in Progress)', href: '#' },
+  { name: 'About', href: '/about' },
+];
+
 export const Footer = () => {
   return (
     <footer className="border-t-1 py-14 pb-14 text-small">
@@ -29,30 +35,17 @@ export const SectionLinks = () => {
         <div className="flex flex-col gap-1">
           <h3 className="text-xl mb-1 font-bold">Resources</h3>
           <ul>
-            <li>
-              <Link
-                href="#"
-                className="border-b-1 border-transparent hover:border-foreground"
-              >
-                Terms of Service
-              </Link>
-            </li>
-            <li>
-              <Link
-                className="border-b-1 border-transparent hover:border-foreground"
-                href="#"
-              >
-                Privacy
-              </Link>
-            </li>
-            <li>
-              <Link
-                className="border-b-1 border-transparent hover:border-foreground"
-                href="#"
-              >
-                About
-              </Link>
-            </li>
+            {paths.map((p) => (
+              <li className="mb-1" key={p.name}>
+                <Link
+                  href={p.href}
+                  className="border-b-1 border-transparent hover:border-foreground transition-all"
+                  scroll={true}
+                >
+                  {p.name}
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
       </div>

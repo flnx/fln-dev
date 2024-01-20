@@ -7,7 +7,7 @@ import projects from '@/constants/projects.json';
 
 export default function Home() {
   return (
-    <section>
+    <section className="mt-5">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}

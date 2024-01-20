@@ -5,7 +5,7 @@ import { Tabs } from '@/components/tabs/Tabs';
 export const AboutLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <section className="relative -top-10">
-      <div className="h-40 w-full md:h-72 bg-gradient-to-l from-pink-300 via-purple-300 to-indigo-400 z-0" />
+      <div className="h-40 md:h-48 w-full  bg-gradient-to-l from-pink-300 via-purple-300 to-indigo-400 z-0" />
 
       <Container>
         <UserHeader />
