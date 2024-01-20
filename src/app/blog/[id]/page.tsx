@@ -33,8 +33,16 @@ const BlogArticle = async ({ params }: Props) => {
   const { attributes } = article.data[0];
   const { url, alternativeText, width, height } = attributes.imgUrl.data.attributes;
 
+  const structuredData = attributes.Seo?.structuredData;
+
   return (
     <Container>
+      {structuredData && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
+      )}
       <header className="max-w-screen-md m-auto mb-16">
         <h1 className="font-bold text-4xl mb-6">{attributes.title}</h1>
         <div className="flex justify-between">

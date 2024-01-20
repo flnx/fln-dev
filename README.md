@@ -16,7 +16,7 @@ A space to showcase my portfolio, personal experiences, and some blog entries.
 1. I'm happy to share this code as a starting point for your own projects. However, please refrain from directly copying it.
 2. Acknowledging the original author is appreciated.
 
-**Note**: Additionally, make sure to remove all personal information from the code before using it, such as blog posts, images, metadata, and so forth.
+**Note**: Additionally, make sure to remove all personal information from the code before using it, such as images, projects, metadata, and so forth.
 
 ---
 

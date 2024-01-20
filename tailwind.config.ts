@@ -51,6 +51,11 @@ const config: Config = {
               DEFAULT: "#000",
               
             },
+            code: {
+              function: '#008000',
+              variable: '#0000ff',
+              keyword: '#ff0000',
+            },
             // ... rest of the colors
           },
         },

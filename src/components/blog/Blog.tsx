@@ -24,7 +24,6 @@ export const Blog = (blogData: BlogDataProps) => {
           />
         </CardHeader>
         <CardBody className="pb-0 pt-2 flex-col items-start p-0 gap-1">
-          {/* <p className="text-tiny uppercase font-bold">Daily Mix</p> */}
           <Chip color="secondary" className="mb-3">
             {blog?.categories}
           </Chip>
