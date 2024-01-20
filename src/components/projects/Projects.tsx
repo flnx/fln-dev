@@ -10,7 +10,7 @@ export const Projects = ({ projects }: ProjectsProps) => {
     <section className="pt-5 pb-5">
       <div className="grid gap-12 md:grid-cols-2 xl:grid-cols-3">
         {projects.map((p) => (
-          <Project {...p} key={p.name} col={true} />
+          <Project {...p} key={p.name} />
         ))}
       </div>
     </section>

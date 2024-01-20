@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 const Projects = () => {
   return (
     <Container>
-      <section className="max-w-screen-lg m-auto mt-9">
+      <section className="max-w-screen-md m-auto mt-9">
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}

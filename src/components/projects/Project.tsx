@@ -2,7 +2,7 @@ import { Card, CardBody, Divider, CardHeader, Chip, Image } from '@nextui-org/re
 import { ProjectProps } from '@/types/projectType';
 import Link from 'next/link';
 
-type ExtendedProjectProps = ProjectProps & { col?: boolean };
+type ExtendedProjectProps = ProjectProps;
 
 export const Project = ({
   name,
@@ -12,18 +12,15 @@ export const Project = ({
   sourceCode,
   imageUrls,
   divider,
-  col,
 }: ExtendedProjectProps) => {
   return (
     <>
       <Card
         isBlurred
-        className={`bg-background/60  dark:bg-default-100/50 shadow-md ${
-          col ? '' : 'sm:flex-row'
-        } relative`}
+        className={`bg-background/60  dark:bg-default-100/50 shadow-md relative`}
         shadow="none"
       >
-        <CardHeader className={col ? 'flex-2' : 'flex-1'}>
+        <CardHeader className="flex-1">
           <Image
             alt="Album cover"
             className="object-cover lg:min-h-60"

@@ -1,10 +1,10 @@
-# [flndev.io - My Portfolio](https://flndev.io/)
+## [flndev.io](https://flndev.io/)
 
-This is a showcase of my projects and experiences.
+A space to showcase my portfolio, personal experiences, and some blog entries.
 
 ## Tech Stack
 
-- **Framework**: [NextJS](https://nextjs.org/)
+- **Framework**: [NextJS](https://nextjs.org/) (TS)
 - **Styling**: [NextUI](https://nextui.org/) + [Tailwind CSS](https://tailwindcss.com/)
 - **CMS**: [Strapi](https://strapi.io/)
 - **Database**: [Supabase](https://supabase.com/)
@@ -13,6 +13,43 @@ This is a showcase of my projects and experiences.
 
 ## Usage License
 
-Feel free to use this code as inspiration for your projects. However, please avoid direct copying. If you find this helpful, crediting the original author is appreciated.
+1. I'm happy to share this code as a starting point for your own projects. However, please refrain from directly copying it.
+2. Acknowledging the original author is appreciated.
 
-**Note**: Make sure to remove all of my personal information - blog posts, images, metadata, etc., before using the code.
+**Note**: Additionally, make sure to remove all personal information from the code before using it, such as blog posts, images, metadata, and so forth.
+
+---
+
+### Screenshots
+
+#### Homepage
+
+|         Home page - Desktop         |         Home page - Mobile         |
+| :---------------------------------: | :--------------------------------: |
+| ![](./screenshots/home-desktop.png) | ![](./screenshots/home-mobile.png) |
+
+---
+
+|         Home page projects - Desktop         |       Home page projects - Mobile        |
+| :------------------------------------------: | :--------------------------------------: |
+| ![](./screenshots/home-projects-desktop.png) | ![](./screenshots/home-jects-mobile.png) |
+
+---
+
+|    Projects page projects - Desktop     |    Projects page projects - Mobile     |
+| :-------------------------------------: | :------------------------------------: |
+| ![](./screenshots/projects-desktop.png) | ![](./screenshots/projects-mobile.png) |
+
+---
+
+|         Blog page - Desktop         |         Blog page - Mobile         |
+| :---------------------------------: | :--------------------------------: |
+| ![](./screenshots/blog-desktop.png) | ![](./screenshots/blog-mobile.png) |
+
+---
+
+|         About page - Desktop         |         About page - Mobile         |
+| :----------------------------------: | :---------------------------------: |
+| ![](./screenshots/about-desktop.png) | ![](./screenshots/about-mobile.png) |
+
+---
