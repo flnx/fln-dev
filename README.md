@@ -32,7 +32,7 @@ A space to showcase my portfolio, personal experiences, and some blog entries.
 
 |         Home page projects - Desktop         |       Home page projects - Mobile        |
 | :------------------------------------------: | :--------------------------------------: |
-| ![](./screenshots/home-projects-desktop.png) | ![](./screenshots/home-jects-mobile.png) |
+| ![](./screenshots/home-projects-desktop.png) | ![](./screenshots/home-projects-mobile.png) |
 
 ---
 
