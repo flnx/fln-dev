@@ -1,8 +1,9 @@
-import { Card, CardBody, Divider, CardHeader, Chip, Image } from '@nextui-org/react';
+import { Card, CardBody, Divider, CardHeader, Chip } from '@nextui-org/react';
 import { ProjectProps } from '@/types/projectType';
 import Link from 'next/link';
+import Image from 'next/image';
 
-type ExtendedProjectProps = ProjectProps;
+type ExtendedProjectProps = ProjectProps & { setSizes?: boolean };
 
 export const Project = ({
   name,
@@ -12,6 +13,7 @@ export const Project = ({
   sourceCode,
   imageUrls,
   divider,
+  setSizes,
 }: ExtendedProjectProps) => {
   return (
     <>
@@ -20,12 +22,19 @@ export const Project = ({
         className={`bg-background/60  dark:bg-default-100/50 shadow-md relative`}
         shadow="none"
       >
-        <CardHeader className="flex-1">
+        <CardHeader className="flex-2">
           <Image
             alt="Album cover"
-            className="object-cover lg:min-h-60"
+            className="object-cover lg:min-h-60 rounded-lg"
             src={imageUrls}
-            width="100%"
+            width={1920}
+            height={1080}
+            sizes={
+              setSizes
+                ? '(min-width: 1280px) 33vw, (min-width: 768px) 50vw, 100vw'
+                : '(min-width: 1024px) 50vw, 100vw'
+            }
+            quality={95}
           />
         </CardHeader>
         <CardBody className="flex-1 overflow-visible">
@@ -33,7 +42,10 @@ export const Project = ({
           <p className="mb-8">{description}</p>
           <div className="flex mt-auto flex-wrap gap-2 mb-6">
             {stack.map((s) => (
-              <Chip className="bg-pink-800 text-white dark:bg-teal-400/10 dark:text-teal-300" key={s}>
+              <Chip
+                className="bg-pink-800 text-white dark:bg-teal-400/10 dark:text-teal-300"
+                key={s}
+              >
                 {s}
               </Chip>
             ))}

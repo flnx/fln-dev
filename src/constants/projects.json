@@ -11,7 +11,7 @@
     ],
     "live": "https://wheredoigo.onrender.com/",
     "sourceCode": "https://github.com/flnx/wheredoigo",
-    "imageUrls": "/images/wheredoigo.png"
+    "imageUrls": "/images/wheredoigo.webp"
   },
   {
     "name": "Billionaire Cash Splash",
@@ -19,7 +19,7 @@
     "stack": ["React", "SCSS", "Typescript"],
     "live": "https://billionaire-cash-splash.web.app/",
     "sourceCode": "https://github.com/flnx/Billionaire-Cash-Splash/tree/main",
-    "imageUrls": "/images/billionaire.png"
+    "imageUrls": "/images/billionaire.webp"
   },
   {
     "name": "E-Bike World",
@@ -27,7 +27,7 @@
     "stack": ["VanillaJS", "LitHTML", "BaaS", "PageJS"],
     "live": "https://ebike-world.web.app/",
     "sourceCode": "https://github.com/flnx/ebike-world",
-    "imageUrls": "/images/ebikeworld.png"
+    "imageUrls": "/images/ebikeworld.webp"
   },
   {
     "name": "Weather Forecast",
@@ -35,7 +35,7 @@
     "stack": ["VanillaJS", "LitHTML", "PageJS", "WeatherAPI"],
     "live": "https://weather-forecast-b59e4.web.app/",
     "sourceCode": "https://github.com/flnx/Weather-App",
-    "imageUrls": "/images/weather.png"
+    "imageUrls": "/images/weather.webp"
   },
   {
     "name": "FLN Dev",
@@ -43,6 +43,6 @@
     "stack": ["NextJS", "Typescript", "Strapi", "Resend", "NextUI", "Tailwind"],
     "live": "https://nonexistingurldootdoot.com",
     "sourceCode": "https://github.com/flnx/fln-dev",
-    "imageUrls": "/images/flndev.jpg"
+    "imageUrls": "/images/flndev.webp"
   }
 ]

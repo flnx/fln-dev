@@ -8,8 +8,8 @@ export const Showcase = () => {
         <div className="flex flex-1 gap-4 relative mb-5">
           <Image
             src="/images/showcase.png"
-            width={3840}
-            height={3840}
+            width={1000}
+            height={1000}
             alt="image"
             sizes="100vw"
             className="w-full h-auto object-contain mb-12 rounded-b-full"
