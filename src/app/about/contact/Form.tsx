@@ -1,9 +1,9 @@
 'use client';
 import { sendEmail } from '@/app/server-actions/sendEmail';
 import { useFormState, useFormStatus } from 'react-dom';
-import { useEffect, useRef } from 'react';
+import { useCallback, useEffect, useRef } from 'react';
 import { Input, Textarea, Button } from '@nextui-org/react';
-import toast, { Toaster } from 'react-hot-toast';
+import toast from 'react-hot-toast';
 
 export const Form = () => {
   const [formState, formAction] = useFormState(sendEmail, {
@@ -13,16 +13,24 @@ export const Form = () => {
 
   const formRef = useRef<HTMLFormElement>(null);
 
-  useEffect(() => {
-    if (formState.success) {
-      formRef.current?.reset();
-      toast.success('Your email has been sent.')
-    }
-  }, [formState.success]);
-
   const errMsg = (path: string) => {
     return formState.data.find((e) => e.path === path)?.message;
   };
+
+  useEffect(() => {
+    if (formState.success) {
+      formRef.current?.reset();
+      toast.success('Your email has been sent.');
+    }
+  }, [formState.success]);
+
+  useEffect(() => {
+    const serverError = errMsg('serverError');
+    
+    if (serverError) {
+      toast.error(formState.data[0].message);
+    }
+  }, [formState]);
 
   return (
     <>
@@ -64,7 +72,6 @@ export const Form = () => {
         />
         <SubmitButtoon />
       </form>
-      <Toaster />
     </>
   );
 };

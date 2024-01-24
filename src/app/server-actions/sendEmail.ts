@@ -51,12 +51,19 @@ export const sendEmail = async (
     // if (data?.error) {
     //   throw data.error;
     // }
+    throw new Error('ala bala');
 
     return { success: true, data: [] };
   } catch (err) {
     return {
       success: false,
-      data: [{ path: "serverError", message: "Server Error" }],
+      data: [
+        {
+          path: "serverError",
+          message:
+            "We're currently experiencing technical difficulties. Please try again later.",
+        },
+      ],
     };
   }
 
