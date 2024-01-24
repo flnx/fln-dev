@@ -66,7 +66,7 @@ const BlogArticle = async ({ params }: Props) => {
       <article className="max-w-screen-md m-auto">
         <div
           dangerouslySetInnerHTML={{ __html: attributes.content }}
-          className="prose prose-lg break-words text-primary prose-headings:text-secondary prose-strong:text-primary dark:prose-blockquote:text-slate-300"
+          className="prose prose-lg break-words text-primary prose-headings:text-secondary prose-strong:text-primary dark:prose-blockquote:text-slate-300 bg-code dark:prose-a:text-blue-700"
         />
       </article>
     </Container>

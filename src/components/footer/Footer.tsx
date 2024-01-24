@@ -87,7 +87,7 @@ export const Aside = () => {
 export const Rights = () => {
   return (
     <div className="text-small mt-10">
-      &copy; {new Date().getFullYear()} FLN-dev. All Rights Reserved
+      &copy; {new Date().getFullYear()} bad engineer. All Rights Reserved
     </div>
   );
 };

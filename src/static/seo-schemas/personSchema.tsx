@@ -5,7 +5,7 @@ export const personSchema: WithContext<Person> = {
   '@type': 'Person',
   name: 'Kaloyan',
   familyName: 'Georgiev',
-  alternateName: 'Fln Dev',
+  alternateName: 'bad engineer',
   jobTitle: 'Web Developer',
   email: 'definitelywebdev@yahoo.com',
   description:
@@ -34,7 +34,7 @@ export const personSchema: WithContext<Person> = {
       url: 'https://softuni.bg/',
     },
   ],
-  url: 'https://www.fln-dev.vercel.com/',
+  url: 'https://www.badengineer.io/',
   sameAs: ['https://github.com/flnx'],
   image: '/images/me.jpg',
   worksFor: [

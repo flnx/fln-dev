@@ -18,7 +18,7 @@ export const Showcase = () => {
         <div className="flex-1 pt-5 md:pt-32">
           <div className="flex flex-col lg:pr-28">
             <h1 className="text-3xl md:text-4xl !leading-relaxed mb-5">
-              I'm Kaloyan, I like{' '}
+              I'm Kalo, I like{' '}
               <span className="font-bold text-pink-700">coding</span> and sharing my
               experiences in the world of web development
             </h1>

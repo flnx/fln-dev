@@ -51,7 +51,7 @@ export const Nav = () => {
             aria-current={isActive('/') ? 'page' : false}
             onClick={() => handleMenu(false)}
           >
-            FLN-DEV
+            bad engineer
           </Link>
         </NavbarBrand>
         <NavbarItem className="ml-2">
@@ -67,7 +67,7 @@ export const Nav = () => {
             className={`font-bold text-2xl ${activeClass('/')}`}
             aria-current={isActive('/') ? 'page' : false}
           >
-            FLN-DEV
+            bad engineer
           </Link>
         </NavbarBrand>
       </NavbarContent>
