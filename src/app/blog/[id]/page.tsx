@@ -63,10 +63,10 @@ const BlogArticle = async ({ params }: Props) => {
           style={{ maxHeight: '34rem' }}
         />
       </header>
-      <article className="max-w-screen-md m-auto text-lg dark:text-slate-300 break-words">
+      <article className="max-w-screen-md m-auto">
         <div
           dangerouslySetInnerHTML={{ __html: attributes.content }}
-          className="prose prose-lg text-primary prose-headings:text-secondary prose-strong:text-primary"
+          className="prose prose-lg break-words text-primary prose-headings:text-secondary prose-strong:text-primary dark:prose-blockquote:text-slate-300"
         />
       </article>
     </Container>

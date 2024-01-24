@@ -32,8 +32,8 @@
   {
     "name": "Weather Forecast",
     "description": "Multi language weather app",
-    "stack": ["VanillaJS", "LitHTML", "PageJS", "WeatherAPI"],
-    "live": "https://weather-forecast-b59e4.web.app/",
+    "stack": ["VanillaJS", "LitHTML", "PageJS", "WeatherAPI", "Express"],
+    "live": "https://minimalistic-weather-forecast.onrender.com/",
     "sourceCode": "https://github.com/flnx/Weather-App",
     "imageUrls": "/images/weather.webp"
   },
