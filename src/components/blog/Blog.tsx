@@ -10,7 +10,7 @@ export const Blog = (blogData: BlogDataProps) => {
 
   return (
     <Link href={`/blog/${blog?.slug || ''}`}>
-      <Card className="gap-5 bg-transparent shadow-none">
+      <Card className="gap-5 bg-transparent shadow-none h-full">
         <CardHeader className="overflow-visible p-0 flex-1">
           <Image
             alt={alternativeText || 'blog image'}
@@ -32,7 +32,7 @@ export const Blog = (blogData: BlogDataProps) => {
             {blog?.description}
           </small>
           <div className="mt-auto flex justify-between w-full pb-2">
-            <time dateTime="20.02.2012">{blog?.date}</time>
+            <time dateTime={blog?.date}>{blog?.date}</time>
             <span>{blog?.readTime} min read</span>
           </div>
         </CardBody>

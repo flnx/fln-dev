@@ -10,7 +10,7 @@ const inter = Inter({ subsets: ['latin'] });
 export const metadata: Metadata = {
   title: {
     default: 'FLN Dev',
-    template: "%s | FLN Dev",
+    template: '%s | FLN Dev',
   },
   description:
     'Kaloyan Georgiev (aka. Fln Dev) is a web developer dedicated to building web apps and sharing insightful articles on web development via his blog.',

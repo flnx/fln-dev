@@ -1,5 +1,9 @@
 "use server";
 import { contactFormSchema } from "@/lib/validations";
+import { EmailTemplate } from "@/components/email-template/EmailTemplate";
+import { Resend } from "resend";
+
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 type Response = {
   success: boolean;
@@ -24,17 +28,37 @@ export const sendEmail = async (
   const payload = Object.fromEntries(formData.entries());
   const result = contactFormSchema.safeParse(payload);
 
-  if (result.success) {
-    return { success: true, data: [] };
+  if (!result.success) {
+    const errors =
+      result.error?.issues.map((err) => ({
+        path: err.path[0],
+        message: err.message,
+      })) || [];
+
+    return { success: false, data: errors };
   }
 
-  const errors =
-    result.error?.issues.map((err) => ({
-      path: err.path[0],
-      message: err.message,
-    })) || [];
+  try {
+    const { name, message, email } = result.data;
 
-  return { success: false, data: errors };
+    // const data = await resend.emails.send({
+    //   from: "Acme <onboarding@resend.dev>",
+    //   to: ["delivered@resend.dev"],
+    //   subject: message,
+    //   react: EmailTemplate({ firstName: "John" }) as React.ReactElement,
+    // });
+
+    // if (data?.error) {
+    //   throw data.error;
+    // }
+
+    return { success: true, data: [] };
+  } catch (err) {
+    return {
+      success: false,
+      data: [{ path: "serverError", message: "Server Error" }],
+    };
+  }
 
   // Send the email
 };

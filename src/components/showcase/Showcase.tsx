@@ -34,7 +34,7 @@ export const Showcase = () => {
                 Read the Blog
               </Link>
               <Link
-                href="/blog"
+                href="/projects"
                 color="foreground"
                 className="rounded-3xl border-1 border-foreground font-semibold w-52 flex flex-col py-5"
               >

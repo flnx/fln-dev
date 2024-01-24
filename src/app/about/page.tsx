@@ -14,21 +14,22 @@ const About = () => {
         className="max-w-screen-xs prose prose-p:text-primary"
         aria-label="about me"
       >
-        <p>
-          I'm a web developer with a primary focus on the frontend. I finished my
-          studies in SoftUni (Bulgaria) in early 2023.
-        </p>
+        <p>I'm a web developer with a primary focus on the frontend.</p>
 
         <p>
-          I love working on projects that I'm passionate about. My goal is to have
-          fun and learn new things everyday. I also enjoy reading/watching IT related
-          stuff, sci-fi movies, listening to podcasts and audiobooks. You can also
-          find me on the street running or in the gym.
+          I love building cool stuff on the internet. And by "cool stuff".. I mean
+          crafting wacky inventions. The process for each new project
+          is always a wild ride with a lot of factory malfunctions. But hey, I'm
+          still here, still going strong, and still loving every minute of it.
         </p>
 
+        <p>You can also find me on the street running or in the gym.</p>
+
         <p>
-          I recently decided to create a blog and I'd love to share my knowledge and
-          experience along the way.
+          I've recently decided to create a blog. I'll be sharing my tales of code
+          triumphs and tech tribulations, hoping to provide fellow developers with
+          some insights. Not only that but also to elevate my own understanding to a
+          more profound level.
         </p>
       </article>
     </section>
