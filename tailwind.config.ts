@@ -49,12 +49,6 @@ const config: Config = {
               //... 50 to 900
               foreground: "#FFFFFF",
               DEFAULT: "#000",
-              
-            },
-            code: {
-              function: '#008000',
-              variable: '#0000ff',
-              keyword: '#ff0000',
             },
             // ... rest of the colors
           },
@@ -73,7 +67,7 @@ const config: Config = {
         },
       },
     }),
-    require('@tailwindcss/typography'),
+    require("@tailwindcss/typography"),
   ],
 };
 export default config;

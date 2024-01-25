@@ -2,8 +2,7 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'About',
-  description:
-    'Frontend web developer with a passion for React, Next.js, and cool projects. Constantly learning and having fun. Explore my coding journey, along with my interests in running, fitness, and blogging about web development stuff and more!',
+  description: 'Frontend web developer with a passion for React, Next.js, and cool projects. Constantly learning and having fun. Explore my coding journey, along with my interests in running, fitness, and blogging about web development stuff and more!',
 };
 
 const About = () => {
@@ -15,14 +14,10 @@ const About = () => {
         aria-label="about me"
       >
         <p>
-          I'm a web developer with a knack for building interesting things on the
-          internet
+          I'm a web developer with a knack for building interesting things on the internet
         </p>
         <p>
-          I'm always seeking new ways to enhance my skills and the projects I work
-          on. Each new pursuit is like a little adventure, filled with challenges to
-          overcome and the occasional unexpected twists. Still loving every minute of
-          it. I remain committed to learning and delivering quality work.
+          I'm always seeking new ways to enhance my skills and the projects I work on. Each new pursuit is like a little adventure, filled with challenges to overcome and occasional unexpected twists. Still loving every minute of it. I remain committed to learning and delivering quality work.
         </p>
 
         <p>
