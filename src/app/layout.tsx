@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
-import { Nav } from '@/components/navbar/Navbar';
+import { Nav } from '@/components/nav/Nav';
 import { Providers } from './providers';
 import { Footer } from '@/components/footer/Footer';
 import { Toaster } from 'react-hot-toast';

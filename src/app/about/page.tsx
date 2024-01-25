@@ -27,11 +27,7 @@ const About = () => {
         <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700"></hr>
 
         <p>
-          <span className="font-semibold">PS: </span>I've recently decided to create
-          a blog. I'll be sharing my knowledge on IT related topics and some of my
-          challenges as a web developoer, hoping to provide helpful information and
-          some insights. Not only that but also to elevate my own understanding to a
-          more profound level.
+          <span className="font-semibold">PS: </span>I've recently decided to create a blog. I'll be sharing my knowledge on IT related topics and some of my challenges as a web developoer, hoping to provide helpful information and some insights. Not only that but also to elevate my own understanding to a more profound level.
         </p>
       </article>
     </section>

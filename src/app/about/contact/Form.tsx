@@ -1,7 +1,7 @@
 'use client';
 import { sendEmail } from '@/app/server-actions/sendEmail';
 import { useFormState, useFormStatus } from 'react-dom';
-import { useCallback, useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import { Input, Textarea, Button } from '@nextui-org/react';
 import toast from 'react-hot-toast';
 
