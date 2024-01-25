@@ -38,7 +38,7 @@
     "imageUrls": "/images/weather.webp"
   },
   {
-    "name": "FLN Dev",
+    "name": "webdevkalo",
     "description": "Personal Portfolio & Blog",
     "stack": ["NextJS", "Typescript", "Strapi", "Resend", "NextUI", "Tailwind"],
     "live": "https://nonexistingurldootdoot.com",

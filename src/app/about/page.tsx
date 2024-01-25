@@ -14,13 +14,16 @@ const About = () => {
         className="max-w-screen-xs prose prose-p:text-primary"
         aria-label="about me"
       >
-        <p>I'm a web developer with a primary focus on the frontend.</p>
+        <p>
+          I'm a web developer with a knack for building interesting things on the
+          internet
+        </p>
 
         <p>
-          I love building cool stuff on the internet. And by "cool stuff".. I mean
-          crafting wacky inventions. The process for each new project
-          is always a wild ride with a lot of factory malfunctions. But hey, I'm
-          still here, still going strong, and still loving every minute of it.
+          I love seeking new and innovative ways to enhance my skills and the
+          projects I work on. Each new endeavor is thrilling journey, filled with
+          challenges and the occasional unexpected turn. Still loving every minute of
+          it. I remain committed to learning and delivering quality work.
         </p>
 
         <p>You can also find me on the street running or in the gym.</p>
