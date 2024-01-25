@@ -18,19 +18,23 @@ const About = () => {
           I'm a web developer with a knack for building interesting things on the
           internet
         </p>
-
         <p>
-          I love seeking new and innovative ways to enhance my skills and the
-          projects I work on. Each new endeavor is thrilling journey, filled with
-          challenges and the occasional unexpected turn. Still loving every minute of
+          I'm always seeking new ways to enhance my skills and the projects I work
+          on. Each new pursuit is like a little adventure, filled with challenges to
+          overcome and the occasional unexpected twists. Still loving every minute of
           it. I remain committed to learning and delivering quality work.
         </p>
 
-        <p>You can also find me on the street running or in the gym.</p>
+        <p>
+          Besides coding, you can also find me on the street running or in the gym.
+        </p>
+
+        <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700"></hr>
 
         <p>
-          I've recently decided to create a blog. I'll be sharing my tales of code
-          triumphs and tech tribulations, hoping to provide helpful information and
+          <span className="font-semibold">PS: </span>I've recently decided to create
+          a blog. I'll be sharing my knowledge on IT related topics and some of my
+          challenges as a web developoer, hoping to provide helpful information and
           some insights. Not only that but also to elevate my own understanding to a
           more profound level.
         </p>
