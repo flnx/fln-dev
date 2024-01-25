@@ -30,7 +30,7 @@ const About = () => {
 
         <p>
           I've recently decided to create a blog. I'll be sharing my tales of code
-          triumphs and tech tribulations, hoping to provide fellow developers with
+          triumphs and tech tribulations, hoping to provide helpful information and
           some insights. Not only that but also to elevate my own understanding to a
           more profound level.
         </p>
