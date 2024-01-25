@@ -2,7 +2,7 @@ import { Container } from '@/components/container/Container';
 import { UserHeader } from '@/components/user-header/UserHeader';
 import { Tabs } from '@/components/tabs/Tabs';
 
-export const AboutLayout = ({ children }: { children: React.ReactNode }) => {
+const AboutLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <section className="relative -top-10">
       <div className="h-40 md:h-48 w-full  bg-gradient-to-l from-pink-300 via-purple-300 to-indigo-400 z-0" />
