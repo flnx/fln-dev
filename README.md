@@ -1,4 +1,4 @@
-## [flndev.io](https://flndev.io/)
+## [flndev.io](https://webdevkalo.vercel.app/)
 
 A space to showcase my portfolio, personal experiences, and some blog entries.
 
