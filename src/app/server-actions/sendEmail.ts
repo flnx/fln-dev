@@ -41,11 +41,14 @@ export const sendEmail = async (
   try {
     const { name, message, email } = result.data;
 
+    console.log(result.data)
+
     const data = await resend.emails.send({
-      from: email,
+      from: "onboarding@resend.dev",
       to: ["definitelywebdev@yahoo.com"],
-      subject: `${name}`,
+      subject: `Message from ${name} - ${email}`,
       text: message,
+      reply_to: email,
       // react: EmailTemplate({ message }) as React.ReactElement,
     });
 
@@ -53,8 +56,11 @@ export const sendEmail = async (
       throw data.error;
     }
 
+    console.log(data?.error);
+
     return { success: true, data: [] };
   } catch (err) {
+    console.log(err);
     return {
       success: false,
       data: [

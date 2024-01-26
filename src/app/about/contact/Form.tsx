@@ -22,7 +22,7 @@ export const Form = () => {
       formRef.current?.reset();
       toast.success('Your email has been sent.');
     }
-  }, [formState.success]);
+  }, [formState.success, formState]);
 
   useEffect(() => {
     const serverError = errMsg('serverError');
