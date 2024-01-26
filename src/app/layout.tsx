@@ -1,10 +1,12 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
-import './globals.css';
 import { Nav } from '@/components/nav/Nav';
 import { Providers } from './providers';
 import { Footer } from '@/components/footer/Footer';
 import { Toaster } from 'react-hot-toast';
+
+import { Analytics } from '@vercel/analytics/react';
+import { Inter } from 'next/font/google';
+import './globals.css';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -13,8 +15,7 @@ export const metadata: Metadata = {
     default: 'WebDevKalo',
     template: '%s | WebDevKalo',
   },
-  description:
-    'Kaloyan Georgiev (aka. webdevkalo) is a web developer dedicated to building web apps and sharing insightful articles on web development via his blog.',
+  description: 'Kaloyan Georgiev (aka. webdevkalo) is a web developer dedicated to building web apps and sharing insightful articles on web development via his blog.',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -30,6 +31,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <div className="h-28" aria-hidden="true" />
           <Footer />
         </Providers>
+        <Analytics />
       </body>
     </html>
   );

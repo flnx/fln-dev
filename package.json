@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@nextui-org/react": "^2.2.9",
+    "@vercel/analytics": "^1.1.2",
     "dotenv": "^16.3.1",
     "framer-motion": "^10.17.0",
     "lucide-react": "^0.309.0",

@@ -41,17 +41,17 @@ export const sendEmail = async (
   try {
     const { name, message, email } = result.data;
 
-    // const data = await resend.emails.send({
-    //   from: "Acme <onboarding@resend.dev>",
-    //   to: ["delivered@resend.dev"],
-    //   subject: message,
-    //   react: EmailTemplate({ firstName: "John" }) as React.ReactElement,
-    // });
+    const data = await resend.emails.send({
+      from: email,
+      to: ["definitelywebdev@yahoo.com"],
+      subject: `${name}`,
+      text: message,
+      // react: EmailTemplate({ message }) as React.ReactElement,
+    });
 
-    // if (data?.error) {
-    //   throw data.error;
-    // }
-    throw new Error('ala bala');
+    if (data?.error) {
+      throw data.error;
+    }
 
     return { success: true, data: [] };
   } catch (err) {
@@ -60,8 +60,7 @@ export const sendEmail = async (
       data: [
         {
           path: "serverError",
-          message:
-            "We're currently experiencing technical difficulties. Please try again later.",
+          message: "We're currently experiencing technical difficulties. Please try again later.",
         },
       ],
     };
