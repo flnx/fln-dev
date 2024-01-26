@@ -26,12 +26,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Providers>
           <Nav />
           <div className="min-h-svh md:min-h-screen">
-            <main>{children}</main>
+            <main>
+              {children}
+              <Analytics />
+            </main>
             <Toaster />
           </div>
           <div className="h-28" aria-hidden="true" />
           <Footer />
-          <Analytics />
         </Providers>
       </body>
     </html>
