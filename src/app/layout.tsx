@@ -31,8 +31,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           </div>
           <div className="h-28" aria-hidden="true" />
           <Footer />
+          <Analytics />
         </Providers>
-        <Analytics />
       </body>
     </html>
   );
