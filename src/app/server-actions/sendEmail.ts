@@ -1,6 +1,5 @@
 "use server";
 import { contactFormSchema } from "@/lib/validations";
-import { EmailTemplate } from "@/components/email-template/EmailTemplate";
 import { Resend } from "resend";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
@@ -41,26 +40,20 @@ export const sendEmail = async (
   try {
     const { name, message, email } = result.data;
 
-    console.log(result.data)
-
     const data = await resend.emails.send({
       from: "onboarding@resend.dev",
       to: ["definitelywebdev@yahoo.com"],
       subject: `Message from ${name} - ${email}`,
       text: message,
       reply_to: email,
-      // react: EmailTemplate({ message }) as React.ReactElement,
     });
 
     if (data?.error) {
       throw data.error;
     }
 
-    console.log(data?.error);
-
     return { success: true, data: [] };
   } catch (err) {
-    console.log(err);
     return {
       success: false,
       data: [
