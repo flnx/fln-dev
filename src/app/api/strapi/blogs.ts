@@ -20,10 +20,13 @@ export const getBlogs = async () => {
 
     return res.json();
   } catch (err) {
-    throw err;
+    console.error(err);
+    return {
+      data: [],
+      error: true,
+    };
   }
 };
-
 
 export const getBlogArticle = async (slug: string) => {
   try {
@@ -36,9 +39,19 @@ export const getBlogArticle = async (slug: string) => {
       throw new Error("Failed to fetch data");
     }
 
-    return res.json();
+    const article = await res.json();
+
+    if (article.data.length === 0) {
+      throw new Error("Not Found");
+    }
+
+    return article;
   } catch (err) {
-    throw err;
+    console.error(err);
+    return {
+      data: [],
+      error: true,
+    };
   }
 };
 
@@ -55,6 +68,10 @@ export const getLatestArticles = async () => {
 
     return res.json();
   } catch (err) {
-    throw err;
+    console.error(err);
+    return {
+      data: [],
+      error: true,
+    };
   }
 };

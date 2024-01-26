@@ -10,11 +10,11 @@ type Props = {
 };
 
 export const generateMetadata = async ({ params }: Props): Promise<Metadata> => {
-  const article: { data: BlogDataProps[] } = await getBlogArticle(params.id);
+  const article: { data: BlogDataProps[], error?: boolean } = await getBlogArticle(params.id);
 
-  if (article.data.length === 0) return {};
+  if (article.error) return {};
 
-  const { title, description, Seo, keywords } = article.data[0].attributes;
+  const { title, description, Seo, keywords } = article.data[0].attributes || {};
 
   return {
     title: Seo?.metaTitle ?? title,
@@ -24,9 +24,9 @@ export const generateMetadata = async ({ params }: Props): Promise<Metadata> => 
 };
 
 const BlogArticle = async ({ params }: Props) => {
-  const article: { data: BlogDataProps[] } = await getBlogArticle(params.id);
+  const article: { data: BlogDataProps[], error?: boolean } = await getBlogArticle(params.id);
 
-  if (article.data.length === 0) {
+  if (article.error) {
     notFound();
   }
 
