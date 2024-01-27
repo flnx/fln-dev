@@ -12,7 +12,6 @@ export const Form = () => {
     data: [],
   });
 
-
   const errMsg = (path: string) => {
     return formState.data.find((e) => e.path === path)?.message;
   };
@@ -77,11 +76,10 @@ export const Form = () => {
 };
 
 const SubmitButton = () => {
-  'use client'
   const { pending } = useFormStatus();
 
   return (
-    <Button color="primary" type="submit" isLoading={pending}>
+    <Button color="primary" type="submit" isDisabled={pending} isLoading={pending}>
       Submit
     </Button>
   );
