@@ -7,8 +7,7 @@ import projects from '@/constants/projects.json';
 
 export const metadata: Metadata = {
   title: 'Personal Projects',
-  description:
-    'Explore my web development portfolio featuring React, Next.js, TypeScript, CSS, HTML and more.',
+  description: 'Explore my web development portfolio featuring React, Next.js, TypeScript, CSS, HTML and more.',
 };
 
 const Projects = () => {

@@ -8,10 +8,8 @@ import { getBlogs } from '../api/strapi/blogs';
 
 export const metadata: Metadata = {
   title: 'Blog',
-  description:
-    'A technical blog about web development and articles on NextJS, React, HTML, CSS, Front-end development and more.',
-  keywords:
-    'React, NextJS, JavaScript, HTML, CSS, Web Development, Front-end, SSR, Server Side Components',
+  description: 'A technical blog about web development and articles on NextJS, React, HTML, CSS, Front-end development and more.',
+  keywords: 'React, NextJS, JavaScript, HTML, CSS, Web Development, Front-end, SSR, Server Side Components',
 };
 
 type BlogsProp = {
@@ -29,6 +27,7 @@ type BlogsProp = {
 
 const Page = async () => {
   const blogs: BlogsProp = await getBlogs();
+
   const featured: BlogDataProps | undefined = blogs.data.find(
     (b) => b.attributes.featured,
   );
