@@ -15,8 +15,11 @@ export const metadata: Metadata = {
     default: 'WebDevKalo',
     template: '%s | WebDevKalo',
   },
-  description:
-    'Kaloyan Georgiev (aka. webdevkalo) is a web developer dedicated to building web apps and sharing insightful articles on web development via his blog.',
+  description: 'Kaloyan Georgiev (aka. webdevkalo). A web developer dedicated to building web apps and sharing articles on IT related topics',
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
