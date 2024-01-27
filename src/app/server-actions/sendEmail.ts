@@ -14,10 +14,10 @@ type Response = {
 
 type PrevState = {
   success: boolean;
-  data: Array<{
+  data: {
     path: string | number;
     message: string;
-  }>;
+  }[];
 };
 
 export const sendEmail = async (
@@ -28,11 +28,10 @@ export const sendEmail = async (
   const result = contactFormSchema.safeParse(payload);
 
   if (!result.success) {
-    const errors =
-      result.error?.issues.map((err) => ({
-        path: err.path[0],
-        message: err.message,
-      })) || [];
+    const errors = result.error.issues.map((err) => ({
+      path: err.path[0],
+      message: err.message,
+    }));
 
     return { success: false, data: errors };
   }
@@ -59,7 +58,8 @@ export const sendEmail = async (
       data: [
         {
           path: "serverError",
-          message: "We're currently experiencing technical difficulties. Please try again later.",
+          message:
+            "We're currently experiencing technical difficulties. Please try again later.",
         },
       ],
     };

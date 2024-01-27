@@ -6,12 +6,12 @@ import { Input, Textarea, Button } from '@nextui-org/react';
 import toast from 'react-hot-toast';
 
 export const Form = () => {
+  const formRef = useRef<HTMLFormElement>(null);
   const [formState, formAction] = useFormState(sendEmail, {
     success: false,
     data: [],
   });
 
-  const formRef = useRef<HTMLFormElement>(null);
 
   const errMsg = (path: string) => {
     return formState.data.find((e) => e.path === path)?.message;
@@ -26,7 +26,7 @@ export const Form = () => {
 
   useEffect(() => {
     const serverError = errMsg('serverError');
-    
+
     if (serverError) {
       toast.error(formState.data[0].message);
     }
@@ -70,13 +70,14 @@ export const Form = () => {
           required
           errorMessage={errMsg('message')}
         />
-        <SubmitButtoon />
+        <SubmitButton />
       </form>
     </>
   );
 };
 
-const SubmitButtoon = () => {
+const SubmitButton = () => {
+  'use client'
   const { pending } = useFormStatus();
 
   return (
