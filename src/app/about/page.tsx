@@ -3,6 +3,14 @@ import { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'About',
   description: 'Frontend web developer with a passion for React, Next.js, and cool projects. Constantly learning and having fun. Explore my coding journey, along with my interests in running, fitness, and blogging about web development stuff and more!',
+  openGraph: {
+    title: 'About Kaloyan Georgiev',
+    description: "A web developer with a knack for building interesting things on the internet",
+    siteName: 'webdevkalo',
+    url: 'https://webdevkalo.vercel.app/about',
+    type: 'profile',
+    locale: 'en-US'
+  },
 };
 
 const About = () => {

@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   description: 'Kaloyan Georgiev (aka. webdevkalo). A web developer dedicated to building web apps and sharing articles on IT related topics',
   openGraph: {
     title: 'webdevkalo',
-    description: 'Creating and deploying interactive, mobile-friendly and accessible web apps.',
+    description: 'Creating and deploying interactive, mobile-friendly apps.',
     siteName: 'webdevkalo',
     url: 'https://webdevkalo.vercel.app/',
     type: 'website',
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   twitter: {
     title: 'webdevkalo',
     card: 'summary_large_image',
-    description: 'Creating and deploying interactive, mobile-friendly and accessible web apps.',
+    description: 'Creating and deploying interactive, mobile-friendly apps.',
   },
   robots: {
     index: true,

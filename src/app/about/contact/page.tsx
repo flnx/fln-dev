@@ -4,8 +4,15 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Contact',
-  description:
-    'Feel free to reach out! Whether you have a project idea, a question, or just want to connect. Drop me a message using the form below or shoot an email to definitelywebdev@yahoo.com. I look forward to hearing from you and exploring potential collaborations.',
+  description: 'Feel free to reach out! Whether you have a project idea, a question, or just want to connect. Drop me a message using the form below or shoot an email to definitelywebdev@yahoo.com. I look forward to hearing from you and exploring potential collaborations.',
+    openGraph: {
+      title: 'Contact Kaloyan Georgiev',
+      description: 'Feel free to reach me out at definitelywebdev@yahoo.com',
+      siteName: 'webdevkalo',
+      url: 'https://webdevkalo.vercel.app/about/contact',
+      type: 'profile',
+      locale: 'en-US'
+    }
 };
 
 const Contact = () => {

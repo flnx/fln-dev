@@ -4,7 +4,15 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Tech Background',
-  description: "Web developer proficient in HTML, CSS/SCSS, Tailwind, JavaScript (JS), React, Next.js, Express, MongoDB, Mongoose, Unit Testing, and Git."
+  description: "HTML, CSS/SCSS, Tailwind, JavaScript (JS), React, Next.js, Express, MongoDB, Mongoose, Unit Testing, and Git.",
+  openGraph: {
+    title: 'Tech Background of Kaloyan Georgiev',
+    description: "Creating and deploying interactive, mobile-friendly and accessible apps",
+    siteName: 'webdevkalo',
+    url: 'https://webdevkalo.vercel.app/about/tech-background',
+    type: 'profile',
+    locale: 'en-US'
+  },
 };
 
 const TechBackground = async () => {
