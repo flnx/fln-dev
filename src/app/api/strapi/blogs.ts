@@ -10,7 +10,7 @@ const authHeaders = () => {
 export const getBlogs = async () => {
   try {
     const res = await fetch(
-      `${process.env.STRAPI_HOST}/api/blogs?sort=createdAt:desc&fields[0]=title&fields[1]=description&fields[2]=date&fields[3]=categories&fields[4]=readTime&fields[5]&fields[6]=slug&fields[7]=featured&fields[8]=updatedAt&populate[0]=imgUrl`,
+      `${process.env.STRAPI_HOST_DEV}/api/blogs?sort=createdAt:desc&fields[0]=title&fields[1]=description&fields[2]=date&fields[3]=categories&fields[4]=readTime&fields[5]&fields[6]=slug&fields[7]=featured&fields[8]=updatedAt&populate[0]=imgUrl`,
       authHeaders(),
     );
 

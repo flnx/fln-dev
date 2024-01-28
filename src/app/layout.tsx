@@ -11,11 +11,25 @@ import './globals.css';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://webdevkalo.vercel.app'),
   title: {
     default: 'WebDevKalo',
     template: '%s | WebDevKalo',
   },
   description: 'Kaloyan Georgiev (aka. webdevkalo). A web developer dedicated to building web apps and sharing articles on IT related topics',
+  openGraph: {
+    title: 'webdevkalo',
+    description: 'Creating and deploying interactive, mobile-friendly and accessible web applications.',
+    siteName: 'webdevkalo',
+    url: 'https://webdevkalo.vercel.app/',
+    type: 'website',
+    locale: 'en-US'
+  },
+  twitter: {
+    title: 'webdevkalo',
+    card: 'summary_large_image',
+    description: 'Creating and deploying interactive, mobile-friendly and accessible web applications.',
+  },
   robots: {
     index: true,
     follow: true,

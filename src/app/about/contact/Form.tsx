@@ -75,9 +75,9 @@ export const Form = () => {
   );
 };
 
-const SubmitButton = () => {
+const SubmitButton = (e: any) => {
   const { pending } = useFormStatus();
-
+  
   return (
     <Button color="primary" type="submit" isDisabled={pending} isLoading={pending}>
       Submit
