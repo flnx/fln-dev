@@ -9,7 +9,16 @@ import { getBlogs } from '../api/strapi/blogs';
 export const metadata: Metadata = {
   title: 'Blog',
   description: 'A technical blog about web development and articles on NextJS, React, HTML, CSS, Front-end development and more.',
-  keywords: 'React, NextJS, JavaScript, HTML, CSS, Web Development, Front-end, SSR, Server Side Components',
+  keywords:
+    'React, NextJS, JavaScript, HTML, CSS, Web Development, Front-end, SSR, Server Side Components',
+  openGraph: {
+    title: "WebDevKalo's Blog",
+    description: 'Web Development Insights and IT Essentials',
+    siteName: 'webdevkalo',
+    url: 'https://webdevkalo.vercel.app/blog',
+    type: 'website',
+    locale: 'en-US',
+  },
 };
 
 type BlogsProp = {
@@ -35,8 +44,8 @@ const Page = async () => {
   return (
     <Container>
       {/* Featured */}
-      <h1 className="text-4xl text-center mb-2 font-bold mt-8">Blog</h1>
-      <p className="text-large text-center mb-20">
+      <h1 className="text-8xl text-center mb-8 font-bold mt-8">Blog</h1>
+      <p className="text-3xl text-center mb-20">
         Web Development Insights and IT Essentials
       </p>
 

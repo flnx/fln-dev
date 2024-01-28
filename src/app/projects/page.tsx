@@ -8,6 +8,14 @@ import projects from '@/constants/projects.json';
 export const metadata: Metadata = {
   title: 'Personal Projects',
   description: 'Explore my web development portfolio featuring React, Next.js, TypeScript, CSS, HTML and more.',
+  openGraph: {
+    title: "Kaloyan's Personal Projects",
+    description: "A list of my personal projects",
+    siteName: 'webdevkalo',
+    url: 'https://webdevkalo.vercel.app/projects',
+    type: 'website',
+    locale: 'en-US'
+  },
 };
 
 const Projects = () => {
