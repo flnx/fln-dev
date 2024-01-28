@@ -75,7 +75,7 @@ export const Form = () => {
   );
 };
 
-const SubmitButton = (e: any) => {
+const SubmitButton = () => {
   const { pending } = useFormStatus();
   
   return (
