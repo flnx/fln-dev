@@ -6,7 +6,7 @@ A space to showcase my portfolio, personal experiences, and some blog entries.
 
 - **Framework**: [NextJS](https://nextjs.org/) (TS)
 - **Styling**: [NextUI](https://nextui.org/) + [Tailwind CSS](https://tailwindcss.com/)
-- **CMS**: [Strapi](https://github.com/flnx/flnDev-cms/)
+- **CMS**: [Strapi](https://strapi.io/)
 - **Database**: [Supabase](https://supabase.com/)
 - **Deployment**: [Vercel](https://vercel.com/)
 - **Analytics**: [Vercel Analytics](https://vercel.com/analytics)
