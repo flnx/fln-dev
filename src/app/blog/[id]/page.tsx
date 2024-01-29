@@ -18,8 +18,6 @@ export const generateMetadata = async ({ params }: Props): Promise<Metadata> => 
 
   const { title, description, Seo, keywords, slug, imgUrl } = article.data[0].attributes || {};
 
-  console.log(imgUrl);
-
   return {
     title: Seo?.metaTitle ?? title,
     description: Seo?.metaDescription ?? description,
