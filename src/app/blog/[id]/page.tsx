@@ -10,21 +10,42 @@ type Props = {
 };
 
 export const generateMetadata = async ({ params }: Props): Promise<Metadata> => {
-  const article: { data: BlogDataProps[], error?: boolean } = await getBlogArticle(params.id);
+  const article: { data: BlogDataProps[]; error?: boolean } = await getBlogArticle(
+    params.id,
+  );
 
   if (article.error) return {};
 
-  const { title, description, Seo, keywords } = article.data[0].attributes || {};
+  const { title, description, Seo, keywords, slug, imgUrl } = article.data[0].attributes || {};
+
+  console.log(imgUrl);
 
   return {
     title: Seo?.metaTitle ?? title,
     description: Seo?.metaDescription ?? description,
     keywords: keywords ?? '',
+    openGraph: {
+      title: title,
+      description: description,
+      siteName: 'webdevkalo',
+      url: `https://webdevkalo.vercel.app/${slug}`,
+      type: 'article',
+      locale: 'en-US',
+      authors: 'Kaloyan Georgiev',
+      images: {
+        url: imgUrl.data.attributes.url,
+        width: imgUrl.data.attributes.width,
+        height: imgUrl.data.attributes.height,
+        alt: imgUrl.data.attributes.alternativeText || `${title} image`,
+      },
+    },
   };
 };
 
 const BlogArticle = async ({ params }: Props) => {
-  const article: { data: BlogDataProps[], error?: boolean } = await getBlogArticle(params.id);
+  const article: { data: BlogDataProps[]; error?: boolean } = await getBlogArticle(
+    params.id,
+  );
 
   if (article.error) {
     notFound();
